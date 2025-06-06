@@ -1,14 +1,19 @@
 #!/usr/bin/tcsh -ef
 
+#
+# Originally this script generated a 3dMEMA command for group analysis.
+# It has been updated to perform the group test with 3dttest++
+# and to run ETAC/Clustsim for cluster thresholding.
+#
 if ( $#argv != 4 ) then
-	
-	echo "usage: create_3dMEMA_test.sh <model> <condition> <subfn> <sesid>"
-	echo "example: create_3dMEMA_test.sh CSPLINzero R-L  list_afni_subj.txt ses-01"
+
+        echo "usage: create_3dMEMA_test.sh <model> <condition> <subfn> <sesid>"
+        echo "example: create_3dMEMA_test.sh CSPLINzero R-L  list_afni_subj.txt ses-01"
     echo "model: "
     echo "condstr: "
-    echo "subfn: file containing list of sub-<????> to be included in the group analysis"
+    echo "subfn: file containing list of subjects to include in group analysis"
     echo "sesid: ses-01 or ses-02"
-	exit 0
+        exit 0
 endif
 
 
@@ -38,7 +43,7 @@ set tstat_A = `3dinfo -label2index "${condstr}#0_Tstat" $ddir/subj.sub0001/$ses/
 
 echo $beta_A $tstat_A
 
-set results_dir = $ddir/group_results/test.${model}.3dMEMA_N=$nv.${condstr}.$ses.results
+set results_dir = $ddir/group_results/test.${model}.3dttest++_N=$nv.${condstr}.$ses.results
 echo $results_dir
 
 if ( ! -d $results_dir ) then
@@ -48,28 +53,19 @@ else
 endif
 
 
+
 set fn = (`cat tmp`)
 
-uber_ttest.py -no_gui -save_script cmd.$model.MEMA.${condstr}       \
-	-program 3dMEMA                                 \
-	-mask $mask_dset                                 \
-	-set_name_A $condstr                                \
-	-dsets_A $fn \
-	-beta_A $beta_A -tstat_A $tstat_A                            \
-	-results_dir $results_dir 
+# Build list of datasets including the beta sub-brick used for testing
+set dsets_A = ()
+foreach d ($fn)
+    set dsets_A = ( $dsets_A "$d[$beta_A]" )
+end
 
-# dealing with additional commands in 3dMEMA that cannot be added with uber_ttest.py
-set linecount=`wc -l cmd.$model.MEMA.${condstr} | awk '{print $1}'`
-@ linecount--
-head -n $linecount cmd.$model.MEMA.${condstr} > \
-	cmd.$model.MEMA.${condstr}.tmp && \
-	mv cmd.$model.MEMA.${condstr}.tmp cmd.$model.MEMA.${condstr}.$ses
+# Run group analysis with 3dttest++ and perform ETAC/Clustsim
+3dttest++ -prefix $results_dir/stats.ttest++ \
+          -mask $mask_dset \
+          -setA $condstr $dsets_A \
+          -ETAC \
+          -Clustsim
 
-
-# add a trailing / to the end of the last line
-sed -i -e '$ s/$/ \\/' cmd.$model.MEMA.${condstr}.$ses
-
-#echo '\t\t-jobs 20 \\\n\t\t-verb 1\\\n\t\t -max_zeros 0.25' >> cmd.$model.MEMA.${condstr}
-echo '\t\t-jobs 20 \\\n' >> cmd.$model.MEMA.${condstr}.$ses
-
-chmod +x cmd.$model.MEMA.${condstr}.$ses

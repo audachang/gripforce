@@ -1,0 +1,1721 @@
+#!/bin/tcsh -xef
+
+# created by uber_ttest.py: version 2.1 (May 11, 2020)
+# creation date: Tue Jun  3 21:34:57 2025
+
+# ---------------------- set process variables ----------------------
+
+set mask_dset = ../out/afni/subject_results/group_results/mask_intersection_func_up2date+tlrc
+
+set dirA = ../out/afni/subject_results
+
+# specify and possibly create results directory
+set results_dir = ../out/afni/subject_results/group_results/test.CSPLINzero.3dMEMA_N=425.R-L.ses-01.results
+if ( ! -d $results_dir ) mkdir $results_dir
+
+# ------------------------- process the data -------------------------
+
+3dMEMA -prefix $results_dir/stats.mema                                                               \
+       -mask $mask_dset                                                                              \
+       -set R-L                                                                                      \
+          001                                                                                        \
+       "$dirA/subj.sub0001/ses-01/sub0001.CSPLINzero.results/stats.sub0001.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0001/ses-01/sub0001.CSPLINzero.results/stats.sub0001.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          002                                                                                        \
+       "$dirA/subj.sub0002/ses-01/sub0002.CSPLINzero.results/stats.sub0002.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0002/ses-01/sub0002.CSPLINzero.results/stats.sub0002.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          003                                                                                        \
+       "$dirA/subj.sub0003/ses-01/sub0003.CSPLINzero.results/stats.sub0003.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0003/ses-01/sub0003.CSPLINzero.results/stats.sub0003.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          004                                                                                        \
+       "$dirA/subj.sub0004/ses-01/sub0004.CSPLINzero.results/stats.sub0004.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0004/ses-01/sub0004.CSPLINzero.results/stats.sub0004.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          005                                                                                        \
+       "$dirA/subj.sub0005/ses-01/sub0005.CSPLINzero.results/stats.sub0005.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0005/ses-01/sub0005.CSPLINzero.results/stats.sub0005.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          006                                                                                        \
+       "$dirA/subj.sub0006/ses-01/sub0006.CSPLINzero.results/stats.sub0006.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0006/ses-01/sub0006.CSPLINzero.results/stats.sub0006.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          007                                                                                        \
+       "$dirA/subj.sub0007/ses-01/sub0007.CSPLINzero.results/stats.sub0007.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0007/ses-01/sub0007.CSPLINzero.results/stats.sub0007.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          008                                                                                        \
+       "$dirA/subj.sub0008/ses-01/sub0008.CSPLINzero.results/stats.sub0008.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0008/ses-01/sub0008.CSPLINzero.results/stats.sub0008.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          009                                                                                        \
+       "$dirA/subj.sub0009/ses-01/sub0009.CSPLINzero.results/stats.sub0009.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0009/ses-01/sub0009.CSPLINzero.results/stats.sub0009.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          010                                                                                        \
+       "$dirA/subj.sub0010/ses-01/sub0010.CSPLINzero.results/stats.sub0010.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0010/ses-01/sub0010.CSPLINzero.results/stats.sub0010.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          011                                                                                        \
+       "$dirA/subj.sub0011/ses-01/sub0011.CSPLINzero.results/stats.sub0011.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0011/ses-01/sub0011.CSPLINzero.results/stats.sub0011.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          012                                                                                        \
+       "$dirA/subj.sub0012/ses-01/sub0012.CSPLINzero.results/stats.sub0012.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0012/ses-01/sub0012.CSPLINzero.results/stats.sub0012.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          013                                                                                        \
+       "$dirA/subj.sub0013/ses-01/sub0013.CSPLINzero.results/stats.sub0013.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0013/ses-01/sub0013.CSPLINzero.results/stats.sub0013.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          015                                                                                        \
+       "$dirA/subj.sub0015/ses-01/sub0015.CSPLINzero.results/stats.sub0015.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0015/ses-01/sub0015.CSPLINzero.results/stats.sub0015.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          016                                                                                        \
+       "$dirA/subj.sub0016/ses-01/sub0016.CSPLINzero.results/stats.sub0016.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0016/ses-01/sub0016.CSPLINzero.results/stats.sub0016.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          017                                                                                        \
+       "$dirA/subj.sub0017/ses-01/sub0017.CSPLINzero.results/stats.sub0017.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0017/ses-01/sub0017.CSPLINzero.results/stats.sub0017.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          018                                                                                        \
+       "$dirA/subj.sub0018/ses-01/sub0018.CSPLINzero.results/stats.sub0018.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0018/ses-01/sub0018.CSPLINzero.results/stats.sub0018.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          019                                                                                        \
+       "$dirA/subj.sub0019/ses-01/sub0019.CSPLINzero.results/stats.sub0019.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0019/ses-01/sub0019.CSPLINzero.results/stats.sub0019.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          021                                                                                        \
+       "$dirA/subj.sub0021/ses-01/sub0021.CSPLINzero.results/stats.sub0021.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0021/ses-01/sub0021.CSPLINzero.results/stats.sub0021.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          022                                                                                        \
+       "$dirA/subj.sub0022/ses-01/sub0022.CSPLINzero.results/stats.sub0022.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0022/ses-01/sub0022.CSPLINzero.results/stats.sub0022.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          023                                                                                        \
+       "$dirA/subj.sub0023/ses-01/sub0023.CSPLINzero.results/stats.sub0023.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0023/ses-01/sub0023.CSPLINzero.results/stats.sub0023.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          024                                                                                        \
+       "$dirA/subj.sub0024/ses-01/sub0024.CSPLINzero.results/stats.sub0024.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0024/ses-01/sub0024.CSPLINzero.results/stats.sub0024.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          025                                                                                        \
+       "$dirA/subj.sub0025/ses-01/sub0025.CSPLINzero.results/stats.sub0025.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0025/ses-01/sub0025.CSPLINzero.results/stats.sub0025.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          026                                                                                        \
+       "$dirA/subj.sub0026/ses-01/sub0026.CSPLINzero.results/stats.sub0026.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0026/ses-01/sub0026.CSPLINzero.results/stats.sub0026.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          027                                                                                        \
+       "$dirA/subj.sub0027/ses-01/sub0027.CSPLINzero.results/stats.sub0027.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0027/ses-01/sub0027.CSPLINzero.results/stats.sub0027.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          028                                                                                        \
+       "$dirA/subj.sub0028/ses-01/sub0028.CSPLINzero.results/stats.sub0028.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0028/ses-01/sub0028.CSPLINzero.results/stats.sub0028.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          029                                                                                        \
+       "$dirA/subj.sub0029/ses-01/sub0029.CSPLINzero.results/stats.sub0029.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0029/ses-01/sub0029.CSPLINzero.results/stats.sub0029.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          030                                                                                        \
+       "$dirA/subj.sub0030/ses-01/sub0030.CSPLINzero.results/stats.sub0030.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0030/ses-01/sub0030.CSPLINzero.results/stats.sub0030.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          031                                                                                        \
+       "$dirA/subj.sub0031/ses-01/sub0031.CSPLINzero.results/stats.sub0031.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0031/ses-01/sub0031.CSPLINzero.results/stats.sub0031.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          032                                                                                        \
+       "$dirA/subj.sub0032/ses-01/sub0032.CSPLINzero.results/stats.sub0032.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0032/ses-01/sub0032.CSPLINzero.results/stats.sub0032.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          033                                                                                        \
+       "$dirA/subj.sub0033/ses-01/sub0033.CSPLINzero.results/stats.sub0033.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0033/ses-01/sub0033.CSPLINzero.results/stats.sub0033.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          034                                                                                        \
+       "$dirA/subj.sub0034/ses-01/sub0034.CSPLINzero.results/stats.sub0034.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0034/ses-01/sub0034.CSPLINzero.results/stats.sub0034.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          035                                                                                        \
+       "$dirA/subj.sub0035/ses-01/sub0035.CSPLINzero.results/stats.sub0035.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0035/ses-01/sub0035.CSPLINzero.results/stats.sub0035.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          036                                                                                        \
+       "$dirA/subj.sub0036/ses-01/sub0036.CSPLINzero.results/stats.sub0036.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0036/ses-01/sub0036.CSPLINzero.results/stats.sub0036.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          038                                                                                        \
+       "$dirA/subj.sub0038/ses-01/sub0038.CSPLINzero.results/stats.sub0038.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0038/ses-01/sub0038.CSPLINzero.results/stats.sub0038.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          039                                                                                        \
+       "$dirA/subj.sub0039/ses-01/sub0039.CSPLINzero.results/stats.sub0039.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0039/ses-01/sub0039.CSPLINzero.results/stats.sub0039.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          040                                                                                        \
+       "$dirA/subj.sub0040/ses-01/sub0040.CSPLINzero.results/stats.sub0040.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0040/ses-01/sub0040.CSPLINzero.results/stats.sub0040.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          042                                                                                        \
+       "$dirA/subj.sub0042/ses-01/sub0042.CSPLINzero.results/stats.sub0042.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0042/ses-01/sub0042.CSPLINzero.results/stats.sub0042.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          043                                                                                        \
+       "$dirA/subj.sub0043/ses-01/sub0043.CSPLINzero.results/stats.sub0043.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0043/ses-01/sub0043.CSPLINzero.results/stats.sub0043.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          044                                                                                        \
+       "$dirA/subj.sub0044/ses-01/sub0044.CSPLINzero.results/stats.sub0044.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0044/ses-01/sub0044.CSPLINzero.results/stats.sub0044.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          045                                                                                        \
+       "$dirA/subj.sub0045/ses-01/sub0045.CSPLINzero.results/stats.sub0045.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0045/ses-01/sub0045.CSPLINzero.results/stats.sub0045.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          046                                                                                        \
+       "$dirA/subj.sub0046/ses-01/sub0046.CSPLINzero.results/stats.sub0046.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0046/ses-01/sub0046.CSPLINzero.results/stats.sub0046.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          047                                                                                        \
+       "$dirA/subj.sub0047/ses-01/sub0047.CSPLINzero.results/stats.sub0047.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0047/ses-01/sub0047.CSPLINzero.results/stats.sub0047.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          048                                                                                        \
+       "$dirA/subj.sub0048/ses-01/sub0048.CSPLINzero.results/stats.sub0048.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0048/ses-01/sub0048.CSPLINzero.results/stats.sub0048.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          049                                                                                        \
+       "$dirA/subj.sub0049/ses-01/sub0049.CSPLINzero.results/stats.sub0049.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0049/ses-01/sub0049.CSPLINzero.results/stats.sub0049.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          050                                                                                        \
+       "$dirA/subj.sub0050/ses-01/sub0050.CSPLINzero.results/stats.sub0050.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0050/ses-01/sub0050.CSPLINzero.results/stats.sub0050.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          051                                                                                        \
+       "$dirA/subj.sub0051/ses-01/sub0051.CSPLINzero.results/stats.sub0051.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0051/ses-01/sub0051.CSPLINzero.results/stats.sub0051.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          052                                                                                        \
+       "$dirA/subj.sub0052/ses-01/sub0052.CSPLINzero.results/stats.sub0052.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0052/ses-01/sub0052.CSPLINzero.results/stats.sub0052.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          053                                                                                        \
+       "$dirA/subj.sub0053/ses-01/sub0053.CSPLINzero.results/stats.sub0053.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0053/ses-01/sub0053.CSPLINzero.results/stats.sub0053.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          055                                                                                        \
+       "$dirA/subj.sub0055/ses-01/sub0055.CSPLINzero.results/stats.sub0055.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0055/ses-01/sub0055.CSPLINzero.results/stats.sub0055.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          056                                                                                        \
+       "$dirA/subj.sub0056/ses-01/sub0056.CSPLINzero.results/stats.sub0056.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0056/ses-01/sub0056.CSPLINzero.results/stats.sub0056.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          057                                                                                        \
+       "$dirA/subj.sub0057/ses-01/sub0057.CSPLINzero.results/stats.sub0057.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0057/ses-01/sub0057.CSPLINzero.results/stats.sub0057.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          058                                                                                        \
+       "$dirA/subj.sub0058/ses-01/sub0058.CSPLINzero.results/stats.sub0058.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0058/ses-01/sub0058.CSPLINzero.results/stats.sub0058.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          059                                                                                        \
+       "$dirA/subj.sub0059/ses-01/sub0059.CSPLINzero.results/stats.sub0059.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0059/ses-01/sub0059.CSPLINzero.results/stats.sub0059.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          060                                                                                        \
+       "$dirA/subj.sub0060/ses-01/sub0060.CSPLINzero.results/stats.sub0060.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0060/ses-01/sub0060.CSPLINzero.results/stats.sub0060.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          061                                                                                        \
+       "$dirA/subj.sub0061/ses-01/sub0061.CSPLINzero.results/stats.sub0061.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0061/ses-01/sub0061.CSPLINzero.results/stats.sub0061.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          063                                                                                        \
+       "$dirA/subj.sub0063/ses-01/sub0063.CSPLINzero.results/stats.sub0063.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0063/ses-01/sub0063.CSPLINzero.results/stats.sub0063.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          064                                                                                        \
+       "$dirA/subj.sub0064/ses-01/sub0064.CSPLINzero.results/stats.sub0064.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0064/ses-01/sub0064.CSPLINzero.results/stats.sub0064.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          065                                                                                        \
+       "$dirA/subj.sub0065/ses-01/sub0065.CSPLINzero.results/stats.sub0065.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0065/ses-01/sub0065.CSPLINzero.results/stats.sub0065.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          066                                                                                        \
+       "$dirA/subj.sub0066/ses-01/sub0066.CSPLINzero.results/stats.sub0066.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0066/ses-01/sub0066.CSPLINzero.results/stats.sub0066.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          068                                                                                        \
+       "$dirA/subj.sub0068/ses-01/sub0068.CSPLINzero.results/stats.sub0068.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0068/ses-01/sub0068.CSPLINzero.results/stats.sub0068.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          069                                                                                        \
+       "$dirA/subj.sub0069/ses-01/sub0069.CSPLINzero.results/stats.sub0069.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0069/ses-01/sub0069.CSPLINzero.results/stats.sub0069.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          070                                                                                        \
+       "$dirA/subj.sub0070/ses-01/sub0070.CSPLINzero.results/stats.sub0070.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0070/ses-01/sub0070.CSPLINzero.results/stats.sub0070.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          071                                                                                        \
+       "$dirA/subj.sub0071/ses-01/sub0071.CSPLINzero.results/stats.sub0071.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0071/ses-01/sub0071.CSPLINzero.results/stats.sub0071.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          072                                                                                        \
+       "$dirA/subj.sub0072/ses-01/sub0072.CSPLINzero.results/stats.sub0072.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0072/ses-01/sub0072.CSPLINzero.results/stats.sub0072.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          073                                                                                        \
+       "$dirA/subj.sub0073/ses-01/sub0073.CSPLINzero.results/stats.sub0073.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0073/ses-01/sub0073.CSPLINzero.results/stats.sub0073.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          074                                                                                        \
+       "$dirA/subj.sub0074/ses-01/sub0074.CSPLINzero.results/stats.sub0074.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0074/ses-01/sub0074.CSPLINzero.results/stats.sub0074.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          075                                                                                        \
+       "$dirA/subj.sub0075/ses-01/sub0075.CSPLINzero.results/stats.sub0075.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0075/ses-01/sub0075.CSPLINzero.results/stats.sub0075.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          076                                                                                        \
+       "$dirA/subj.sub0076/ses-01/sub0076.CSPLINzero.results/stats.sub0076.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0076/ses-01/sub0076.CSPLINzero.results/stats.sub0076.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          078                                                                                        \
+       "$dirA/subj.sub0078/ses-01/sub0078.CSPLINzero.results/stats.sub0078.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0078/ses-01/sub0078.CSPLINzero.results/stats.sub0078.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          079                                                                                        \
+       "$dirA/subj.sub0079/ses-01/sub0079.CSPLINzero.results/stats.sub0079.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0079/ses-01/sub0079.CSPLINzero.results/stats.sub0079.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          080                                                                                        \
+       "$dirA/subj.sub0080/ses-01/sub0080.CSPLINzero.results/stats.sub0080.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0080/ses-01/sub0080.CSPLINzero.results/stats.sub0080.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          081                                                                                        \
+       "$dirA/subj.sub0081/ses-01/sub0081.CSPLINzero.results/stats.sub0081.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0081/ses-01/sub0081.CSPLINzero.results/stats.sub0081.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          082                                                                                        \
+       "$dirA/subj.sub0082/ses-01/sub0082.CSPLINzero.results/stats.sub0082.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0082/ses-01/sub0082.CSPLINzero.results/stats.sub0082.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          084                                                                                        \
+       "$dirA/subj.sub0084/ses-01/sub0084.CSPLINzero.results/stats.sub0084.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0084/ses-01/sub0084.CSPLINzero.results/stats.sub0084.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          085                                                                                        \
+       "$dirA/subj.sub0085/ses-01/sub0085.CSPLINzero.results/stats.sub0085.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0085/ses-01/sub0085.CSPLINzero.results/stats.sub0085.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          086                                                                                        \
+       "$dirA/subj.sub0086/ses-01/sub0086.CSPLINzero.results/stats.sub0086.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0086/ses-01/sub0086.CSPLINzero.results/stats.sub0086.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          087                                                                                        \
+       "$dirA/subj.sub0087/ses-01/sub0087.CSPLINzero.results/stats.sub0087.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0087/ses-01/sub0087.CSPLINzero.results/stats.sub0087.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          088                                                                                        \
+       "$dirA/subj.sub0088/ses-01/sub0088.CSPLINzero.results/stats.sub0088.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0088/ses-01/sub0088.CSPLINzero.results/stats.sub0088.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          089                                                                                        \
+       "$dirA/subj.sub0089/ses-01/sub0089.CSPLINzero.results/stats.sub0089.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0089/ses-01/sub0089.CSPLINzero.results/stats.sub0089.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          091                                                                                        \
+       "$dirA/subj.sub0091/ses-01/sub0091.CSPLINzero.results/stats.sub0091.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0091/ses-01/sub0091.CSPLINzero.results/stats.sub0091.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          092                                                                                        \
+       "$dirA/subj.sub0092/ses-01/sub0092.CSPLINzero.results/stats.sub0092.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0092/ses-01/sub0092.CSPLINzero.results/stats.sub0092.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          093                                                                                        \
+       "$dirA/subj.sub0093/ses-01/sub0093.CSPLINzero.results/stats.sub0093.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0093/ses-01/sub0093.CSPLINzero.results/stats.sub0093.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          094                                                                                        \
+       "$dirA/subj.sub0094/ses-01/sub0094.CSPLINzero.results/stats.sub0094.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0094/ses-01/sub0094.CSPLINzero.results/stats.sub0094.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          095                                                                                        \
+       "$dirA/subj.sub0095/ses-01/sub0095.CSPLINzero.results/stats.sub0095.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0095/ses-01/sub0095.CSPLINzero.results/stats.sub0095.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          096                                                                                        \
+       "$dirA/subj.sub0096/ses-01/sub0096.CSPLINzero.results/stats.sub0096.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0096/ses-01/sub0096.CSPLINzero.results/stats.sub0096.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          097                                                                                        \
+       "$dirA/subj.sub0097/ses-01/sub0097.CSPLINzero.results/stats.sub0097.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0097/ses-01/sub0097.CSPLINzero.results/stats.sub0097.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          098                                                                                        \
+       "$dirA/subj.sub0098/ses-01/sub0098.CSPLINzero.results/stats.sub0098.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0098/ses-01/sub0098.CSPLINzero.results/stats.sub0098.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          099                                                                                        \
+       "$dirA/subj.sub0099/ses-01/sub0099.CSPLINzero.results/stats.sub0099.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0099/ses-01/sub0099.CSPLINzero.results/stats.sub0099.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          100                                                                                        \
+       "$dirA/subj.sub0100/ses-01/sub0100.CSPLINzero.results/stats.sub0100.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0100/ses-01/sub0100.CSPLINzero.results/stats.sub0100.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          101                                                                                        \
+       "$dirA/subj.sub0101/ses-01/sub0101.CSPLINzero.results/stats.sub0101.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0101/ses-01/sub0101.CSPLINzero.results/stats.sub0101.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          102                                                                                        \
+       "$dirA/subj.sub0102/ses-01/sub0102.CSPLINzero.results/stats.sub0102.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0102/ses-01/sub0102.CSPLINzero.results/stats.sub0102.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          103                                                                                        \
+       "$dirA/subj.sub0103/ses-01/sub0103.CSPLINzero.results/stats.sub0103.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0103/ses-01/sub0103.CSPLINzero.results/stats.sub0103.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          105                                                                                        \
+       "$dirA/subj.sub0105/ses-01/sub0105.CSPLINzero.results/stats.sub0105.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0105/ses-01/sub0105.CSPLINzero.results/stats.sub0105.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          106                                                                                        \
+       "$dirA/subj.sub0106/ses-01/sub0106.CSPLINzero.results/stats.sub0106.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0106/ses-01/sub0106.CSPLINzero.results/stats.sub0106.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          107                                                                                        \
+       "$dirA/subj.sub0107/ses-01/sub0107.CSPLINzero.results/stats.sub0107.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0107/ses-01/sub0107.CSPLINzero.results/stats.sub0107.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          110                                                                                        \
+       "$dirA/subj.sub0110/ses-01/sub0110.CSPLINzero.results/stats.sub0110.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0110/ses-01/sub0110.CSPLINzero.results/stats.sub0110.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          111                                                                                        \
+       "$dirA/subj.sub0111/ses-01/sub0111.CSPLINzero.results/stats.sub0111.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0111/ses-01/sub0111.CSPLINzero.results/stats.sub0111.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          112                                                                                        \
+       "$dirA/subj.sub0112/ses-01/sub0112.CSPLINzero.results/stats.sub0112.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0112/ses-01/sub0112.CSPLINzero.results/stats.sub0112.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          113                                                                                        \
+       "$dirA/subj.sub0113/ses-01/sub0113.CSPLINzero.results/stats.sub0113.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0113/ses-01/sub0113.CSPLINzero.results/stats.sub0113.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          114                                                                                        \
+       "$dirA/subj.sub0114/ses-01/sub0114.CSPLINzero.results/stats.sub0114.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0114/ses-01/sub0114.CSPLINzero.results/stats.sub0114.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          115                                                                                        \
+       "$dirA/subj.sub0115/ses-01/sub0115.CSPLINzero.results/stats.sub0115.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0115/ses-01/sub0115.CSPLINzero.results/stats.sub0115.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          116                                                                                        \
+       "$dirA/subj.sub0116/ses-01/sub0116.CSPLINzero.results/stats.sub0116.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0116/ses-01/sub0116.CSPLINzero.results/stats.sub0116.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          117                                                                                        \
+       "$dirA/subj.sub0117/ses-01/sub0117.CSPLINzero.results/stats.sub0117.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0117/ses-01/sub0117.CSPLINzero.results/stats.sub0117.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          118                                                                                        \
+       "$dirA/subj.sub0118/ses-01/sub0118.CSPLINzero.results/stats.sub0118.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0118/ses-01/sub0118.CSPLINzero.results/stats.sub0118.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          120                                                                                        \
+       "$dirA/subj.sub0120/ses-01/sub0120.CSPLINzero.results/stats.sub0120.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0120/ses-01/sub0120.CSPLINzero.results/stats.sub0120.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          121                                                                                        \
+       "$dirA/subj.sub0121/ses-01/sub0121.CSPLINzero.results/stats.sub0121.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0121/ses-01/sub0121.CSPLINzero.results/stats.sub0121.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          122                                                                                        \
+       "$dirA/subj.sub0122/ses-01/sub0122.CSPLINzero.results/stats.sub0122.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0122/ses-01/sub0122.CSPLINzero.results/stats.sub0122.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          123                                                                                        \
+       "$dirA/subj.sub0123/ses-01/sub0123.CSPLINzero.results/stats.sub0123.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0123/ses-01/sub0123.CSPLINzero.results/stats.sub0123.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          124                                                                                        \
+       "$dirA/subj.sub0124/ses-01/sub0124.CSPLINzero.results/stats.sub0124.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0124/ses-01/sub0124.CSPLINzero.results/stats.sub0124.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          125                                                                                        \
+       "$dirA/subj.sub0125/ses-01/sub0125.CSPLINzero.results/stats.sub0125.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0125/ses-01/sub0125.CSPLINzero.results/stats.sub0125.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          126                                                                                        \
+       "$dirA/subj.sub0126/ses-01/sub0126.CSPLINzero.results/stats.sub0126.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0126/ses-01/sub0126.CSPLINzero.results/stats.sub0126.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          127                                                                                        \
+       "$dirA/subj.sub0127/ses-01/sub0127.CSPLINzero.results/stats.sub0127.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0127/ses-01/sub0127.CSPLINzero.results/stats.sub0127.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          128                                                                                        \
+       "$dirA/subj.sub0128/ses-01/sub0128.CSPLINzero.results/stats.sub0128.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0128/ses-01/sub0128.CSPLINzero.results/stats.sub0128.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          129                                                                                        \
+       "$dirA/subj.sub0129/ses-01/sub0129.CSPLINzero.results/stats.sub0129.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0129/ses-01/sub0129.CSPLINzero.results/stats.sub0129.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          130                                                                                        \
+       "$dirA/subj.sub0130/ses-01/sub0130.CSPLINzero.results/stats.sub0130.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0130/ses-01/sub0130.CSPLINzero.results/stats.sub0130.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          131                                                                                        \
+       "$dirA/subj.sub0131/ses-01/sub0131.CSPLINzero.results/stats.sub0131.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0131/ses-01/sub0131.CSPLINzero.results/stats.sub0131.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          132                                                                                        \
+       "$dirA/subj.sub0132/ses-01/sub0132.CSPLINzero.results/stats.sub0132.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0132/ses-01/sub0132.CSPLINzero.results/stats.sub0132.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          133                                                                                        \
+       "$dirA/subj.sub0133/ses-01/sub0133.CSPLINzero.results/stats.sub0133.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0133/ses-01/sub0133.CSPLINzero.results/stats.sub0133.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          135                                                                                        \
+       "$dirA/subj.sub0135/ses-01/sub0135.CSPLINzero.results/stats.sub0135.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0135/ses-01/sub0135.CSPLINzero.results/stats.sub0135.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          136                                                                                        \
+       "$dirA/subj.sub0136/ses-01/sub0136.CSPLINzero.results/stats.sub0136.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0136/ses-01/sub0136.CSPLINzero.results/stats.sub0136.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          137                                                                                        \
+       "$dirA/subj.sub0137/ses-01/sub0137.CSPLINzero.results/stats.sub0137.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0137/ses-01/sub0137.CSPLINzero.results/stats.sub0137.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          138                                                                                        \
+       "$dirA/subj.sub0138/ses-01/sub0138.CSPLINzero.results/stats.sub0138.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0138/ses-01/sub0138.CSPLINzero.results/stats.sub0138.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          139                                                                                        \
+       "$dirA/subj.sub0139/ses-01/sub0139.CSPLINzero.results/stats.sub0139.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0139/ses-01/sub0139.CSPLINzero.results/stats.sub0139.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          140                                                                                        \
+       "$dirA/subj.sub0140/ses-01/sub0140.CSPLINzero.results/stats.sub0140.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0140/ses-01/sub0140.CSPLINzero.results/stats.sub0140.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          141                                                                                        \
+       "$dirA/subj.sub0141/ses-01/sub0141.CSPLINzero.results/stats.sub0141.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0141/ses-01/sub0141.CSPLINzero.results/stats.sub0141.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          142                                                                                        \
+       "$dirA/subj.sub0142/ses-01/sub0142.CSPLINzero.results/stats.sub0142.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0142/ses-01/sub0142.CSPLINzero.results/stats.sub0142.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          143                                                                                        \
+       "$dirA/subj.sub0143/ses-01/sub0143.CSPLINzero.results/stats.sub0143.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0143/ses-01/sub0143.CSPLINzero.results/stats.sub0143.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          144                                                                                        \
+       "$dirA/subj.sub0144/ses-01/sub0144.CSPLINzero.results/stats.sub0144.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0144/ses-01/sub0144.CSPLINzero.results/stats.sub0144.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          145                                                                                        \
+       "$dirA/subj.sub0145/ses-01/sub0145.CSPLINzero.results/stats.sub0145.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0145/ses-01/sub0145.CSPLINzero.results/stats.sub0145.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          146                                                                                        \
+       "$dirA/subj.sub0146/ses-01/sub0146.CSPLINzero.results/stats.sub0146.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0146/ses-01/sub0146.CSPLINzero.results/stats.sub0146.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          147                                                                                        \
+       "$dirA/subj.sub0147/ses-01/sub0147.CSPLINzero.results/stats.sub0147.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0147/ses-01/sub0147.CSPLINzero.results/stats.sub0147.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          148                                                                                        \
+       "$dirA/subj.sub0148/ses-01/sub0148.CSPLINzero.results/stats.sub0148.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0148/ses-01/sub0148.CSPLINzero.results/stats.sub0148.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          149                                                                                        \
+       "$dirA/subj.sub0149/ses-01/sub0149.CSPLINzero.results/stats.sub0149.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0149/ses-01/sub0149.CSPLINzero.results/stats.sub0149.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          150                                                                                        \
+       "$dirA/subj.sub0150/ses-01/sub0150.CSPLINzero.results/stats.sub0150.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0150/ses-01/sub0150.CSPLINzero.results/stats.sub0150.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          151                                                                                        \
+       "$dirA/subj.sub0151/ses-01/sub0151.CSPLINzero.results/stats.sub0151.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0151/ses-01/sub0151.CSPLINzero.results/stats.sub0151.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          152                                                                                        \
+       "$dirA/subj.sub0152/ses-01/sub0152.CSPLINzero.results/stats.sub0152.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0152/ses-01/sub0152.CSPLINzero.results/stats.sub0152.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          154                                                                                        \
+       "$dirA/subj.sub0154/ses-01/sub0154.CSPLINzero.results/stats.sub0154.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0154/ses-01/sub0154.CSPLINzero.results/stats.sub0154.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          155                                                                                        \
+       "$dirA/subj.sub0155/ses-01/sub0155.CSPLINzero.results/stats.sub0155.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0155/ses-01/sub0155.CSPLINzero.results/stats.sub0155.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          156                                                                                        \
+       "$dirA/subj.sub0156/ses-01/sub0156.CSPLINzero.results/stats.sub0156.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0156/ses-01/sub0156.CSPLINzero.results/stats.sub0156.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          157                                                                                        \
+       "$dirA/subj.sub0157/ses-01/sub0157.CSPLINzero.results/stats.sub0157.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0157/ses-01/sub0157.CSPLINzero.results/stats.sub0157.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          158                                                                                        \
+       "$dirA/subj.sub0158/ses-01/sub0158.CSPLINzero.results/stats.sub0158.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0158/ses-01/sub0158.CSPLINzero.results/stats.sub0158.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          159                                                                                        \
+       "$dirA/subj.sub0159/ses-01/sub0159.CSPLINzero.results/stats.sub0159.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0159/ses-01/sub0159.CSPLINzero.results/stats.sub0159.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          160                                                                                        \
+       "$dirA/subj.sub0160/ses-01/sub0160.CSPLINzero.results/stats.sub0160.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0160/ses-01/sub0160.CSPLINzero.results/stats.sub0160.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          161                                                                                        \
+       "$dirA/subj.sub0161/ses-01/sub0161.CSPLINzero.results/stats.sub0161.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0161/ses-01/sub0161.CSPLINzero.results/stats.sub0161.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          162                                                                                        \
+       "$dirA/subj.sub0162/ses-01/sub0162.CSPLINzero.results/stats.sub0162.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0162/ses-01/sub0162.CSPLINzero.results/stats.sub0162.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          163                                                                                        \
+       "$dirA/subj.sub0163/ses-01/sub0163.CSPLINzero.results/stats.sub0163.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0163/ses-01/sub0163.CSPLINzero.results/stats.sub0163.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          164                                                                                        \
+       "$dirA/subj.sub0164/ses-01/sub0164.CSPLINzero.results/stats.sub0164.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0164/ses-01/sub0164.CSPLINzero.results/stats.sub0164.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          165                                                                                        \
+       "$dirA/subj.sub0165/ses-01/sub0165.CSPLINzero.results/stats.sub0165.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0165/ses-01/sub0165.CSPLINzero.results/stats.sub0165.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          166                                                                                        \
+       "$dirA/subj.sub0166/ses-01/sub0166.CSPLINzero.results/stats.sub0166.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0166/ses-01/sub0166.CSPLINzero.results/stats.sub0166.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          168                                                                                        \
+       "$dirA/subj.sub0168/ses-01/sub0168.CSPLINzero.results/stats.sub0168.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0168/ses-01/sub0168.CSPLINzero.results/stats.sub0168.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          169                                                                                        \
+       "$dirA/subj.sub0169/ses-01/sub0169.CSPLINzero.results/stats.sub0169.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0169/ses-01/sub0169.CSPLINzero.results/stats.sub0169.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          170                                                                                        \
+       "$dirA/subj.sub0170/ses-01/sub0170.CSPLINzero.results/stats.sub0170.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0170/ses-01/sub0170.CSPLINzero.results/stats.sub0170.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          171                                                                                        \
+       "$dirA/subj.sub0171/ses-01/sub0171.CSPLINzero.results/stats.sub0171.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0171/ses-01/sub0171.CSPLINzero.results/stats.sub0171.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          172                                                                                        \
+       "$dirA/subj.sub0172/ses-01/sub0172.CSPLINzero.results/stats.sub0172.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0172/ses-01/sub0172.CSPLINzero.results/stats.sub0172.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          173                                                                                        \
+       "$dirA/subj.sub0173/ses-01/sub0173.CSPLINzero.results/stats.sub0173.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0173/ses-01/sub0173.CSPLINzero.results/stats.sub0173.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          174                                                                                        \
+       "$dirA/subj.sub0174/ses-01/sub0174.CSPLINzero.results/stats.sub0174.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0174/ses-01/sub0174.CSPLINzero.results/stats.sub0174.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          175                                                                                        \
+       "$dirA/subj.sub0175/ses-01/sub0175.CSPLINzero.results/stats.sub0175.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0175/ses-01/sub0175.CSPLINzero.results/stats.sub0175.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          176                                                                                        \
+       "$dirA/subj.sub0176/ses-01/sub0176.CSPLINzero.results/stats.sub0176.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0176/ses-01/sub0176.CSPLINzero.results/stats.sub0176.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          177                                                                                        \
+       "$dirA/subj.sub0177/ses-01/sub0177.CSPLINzero.results/stats.sub0177.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0177/ses-01/sub0177.CSPLINzero.results/stats.sub0177.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          178                                                                                        \
+       "$dirA/subj.sub0178/ses-01/sub0178.CSPLINzero.results/stats.sub0178.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0178/ses-01/sub0178.CSPLINzero.results/stats.sub0178.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          179                                                                                        \
+       "$dirA/subj.sub0179/ses-01/sub0179.CSPLINzero.results/stats.sub0179.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0179/ses-01/sub0179.CSPLINzero.results/stats.sub0179.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          180                                                                                        \
+       "$dirA/subj.sub0180/ses-01/sub0180.CSPLINzero.results/stats.sub0180.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0180/ses-01/sub0180.CSPLINzero.results/stats.sub0180.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          181                                                                                        \
+       "$dirA/subj.sub0181/ses-01/sub0181.CSPLINzero.results/stats.sub0181.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0181/ses-01/sub0181.CSPLINzero.results/stats.sub0181.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          182                                                                                        \
+       "$dirA/subj.sub0182/ses-01/sub0182.CSPLINzero.results/stats.sub0182.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0182/ses-01/sub0182.CSPLINzero.results/stats.sub0182.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          183                                                                                        \
+       "$dirA/subj.sub0183/ses-01/sub0183.CSPLINzero.results/stats.sub0183.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0183/ses-01/sub0183.CSPLINzero.results/stats.sub0183.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          184                                                                                        \
+       "$dirA/subj.sub0184/ses-01/sub0184.CSPLINzero.results/stats.sub0184.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0184/ses-01/sub0184.CSPLINzero.results/stats.sub0184.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          186                                                                                        \
+       "$dirA/subj.sub0186/ses-01/sub0186.CSPLINzero.results/stats.sub0186.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0186/ses-01/sub0186.CSPLINzero.results/stats.sub0186.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          187                                                                                        \
+       "$dirA/subj.sub0187/ses-01/sub0187.CSPLINzero.results/stats.sub0187.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0187/ses-01/sub0187.CSPLINzero.results/stats.sub0187.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          189                                                                                        \
+       "$dirA/subj.sub0189/ses-01/sub0189.CSPLINzero.results/stats.sub0189.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0189/ses-01/sub0189.CSPLINzero.results/stats.sub0189.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          192                                                                                        \
+       "$dirA/subj.sub0192/ses-01/sub0192.CSPLINzero.results/stats.sub0192.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0192/ses-01/sub0192.CSPLINzero.results/stats.sub0192.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          193                                                                                        \
+       "$dirA/subj.sub0193/ses-01/sub0193.CSPLINzero.results/stats.sub0193.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0193/ses-01/sub0193.CSPLINzero.results/stats.sub0193.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          194                                                                                        \
+       "$dirA/subj.sub0194/ses-01/sub0194.CSPLINzero.results/stats.sub0194.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0194/ses-01/sub0194.CSPLINzero.results/stats.sub0194.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          195                                                                                        \
+       "$dirA/subj.sub0195/ses-01/sub0195.CSPLINzero.results/stats.sub0195.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0195/ses-01/sub0195.CSPLINzero.results/stats.sub0195.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          196                                                                                        \
+       "$dirA/subj.sub0196/ses-01/sub0196.CSPLINzero.results/stats.sub0196.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0196/ses-01/sub0196.CSPLINzero.results/stats.sub0196.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          197                                                                                        \
+       "$dirA/subj.sub0197/ses-01/sub0197.CSPLINzero.results/stats.sub0197.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0197/ses-01/sub0197.CSPLINzero.results/stats.sub0197.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          198                                                                                        \
+       "$dirA/subj.sub0198/ses-01/sub0198.CSPLINzero.results/stats.sub0198.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0198/ses-01/sub0198.CSPLINzero.results/stats.sub0198.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          199                                                                                        \
+       "$dirA/subj.sub0199/ses-01/sub0199.CSPLINzero.results/stats.sub0199.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0199/ses-01/sub0199.CSPLINzero.results/stats.sub0199.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          200                                                                                        \
+       "$dirA/subj.sub0200/ses-01/sub0200.CSPLINzero.results/stats.sub0200.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0200/ses-01/sub0200.CSPLINzero.results/stats.sub0200.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          201                                                                                        \
+       "$dirA/subj.sub0201/ses-01/sub0201.CSPLINzero.results/stats.sub0201.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0201/ses-01/sub0201.CSPLINzero.results/stats.sub0201.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          202                                                                                        \
+       "$dirA/subj.sub0202/ses-01/sub0202.CSPLINzero.results/stats.sub0202.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0202/ses-01/sub0202.CSPLINzero.results/stats.sub0202.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          204                                                                                        \
+       "$dirA/subj.sub0204/ses-01/sub0204.CSPLINzero.results/stats.sub0204.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0204/ses-01/sub0204.CSPLINzero.results/stats.sub0204.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          205                                                                                        \
+       "$dirA/subj.sub0205/ses-01/sub0205.CSPLINzero.results/stats.sub0205.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0205/ses-01/sub0205.CSPLINzero.results/stats.sub0205.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          206                                                                                        \
+       "$dirA/subj.sub0206/ses-01/sub0206.CSPLINzero.results/stats.sub0206.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0206/ses-01/sub0206.CSPLINzero.results/stats.sub0206.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          207                                                                                        \
+       "$dirA/subj.sub0207/ses-01/sub0207.CSPLINzero.results/stats.sub0207.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0207/ses-01/sub0207.CSPLINzero.results/stats.sub0207.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          208                                                                                        \
+       "$dirA/subj.sub0208/ses-01/sub0208.CSPLINzero.results/stats.sub0208.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0208/ses-01/sub0208.CSPLINzero.results/stats.sub0208.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          210                                                                                        \
+       "$dirA/subj.sub0210/ses-01/sub0210.CSPLINzero.results/stats.sub0210.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0210/ses-01/sub0210.CSPLINzero.results/stats.sub0210.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          211                                                                                        \
+       "$dirA/subj.sub0211/ses-01/sub0211.CSPLINzero.results/stats.sub0211.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0211/ses-01/sub0211.CSPLINzero.results/stats.sub0211.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          212                                                                                        \
+       "$dirA/subj.sub0212/ses-01/sub0212.CSPLINzero.results/stats.sub0212.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0212/ses-01/sub0212.CSPLINzero.results/stats.sub0212.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          213                                                                                        \
+       "$dirA/subj.sub0213/ses-01/sub0213.CSPLINzero.results/stats.sub0213.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0213/ses-01/sub0213.CSPLINzero.results/stats.sub0213.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          214                                                                                        \
+       "$dirA/subj.sub0214/ses-01/sub0214.CSPLINzero.results/stats.sub0214.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0214/ses-01/sub0214.CSPLINzero.results/stats.sub0214.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          215                                                                                        \
+       "$dirA/subj.sub0215/ses-01/sub0215.CSPLINzero.results/stats.sub0215.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0215/ses-01/sub0215.CSPLINzero.results/stats.sub0215.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          216                                                                                        \
+       "$dirA/subj.sub0216/ses-01/sub0216.CSPLINzero.results/stats.sub0216.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0216/ses-01/sub0216.CSPLINzero.results/stats.sub0216.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          217                                                                                        \
+       "$dirA/subj.sub0217/ses-01/sub0217.CSPLINzero.results/stats.sub0217.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0217/ses-01/sub0217.CSPLINzero.results/stats.sub0217.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          218                                                                                        \
+       "$dirA/subj.sub0218/ses-01/sub0218.CSPLINzero.results/stats.sub0218.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0218/ses-01/sub0218.CSPLINzero.results/stats.sub0218.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          219                                                                                        \
+       "$dirA/subj.sub0219/ses-01/sub0219.CSPLINzero.results/stats.sub0219.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0219/ses-01/sub0219.CSPLINzero.results/stats.sub0219.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          220                                                                                        \
+       "$dirA/subj.sub0220/ses-01/sub0220.CSPLINzero.results/stats.sub0220.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0220/ses-01/sub0220.CSPLINzero.results/stats.sub0220.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          221                                                                                        \
+       "$dirA/subj.sub0221/ses-01/sub0221.CSPLINzero.results/stats.sub0221.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0221/ses-01/sub0221.CSPLINzero.results/stats.sub0221.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          222                                                                                        \
+       "$dirA/subj.sub0222/ses-01/sub0222.CSPLINzero.results/stats.sub0222.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0222/ses-01/sub0222.CSPLINzero.results/stats.sub0222.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          223                                                                                        \
+       "$dirA/subj.sub0223/ses-01/sub0223.CSPLINzero.results/stats.sub0223.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0223/ses-01/sub0223.CSPLINzero.results/stats.sub0223.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          224                                                                                        \
+       "$dirA/subj.sub0224/ses-01/sub0224.CSPLINzero.results/stats.sub0224.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0224/ses-01/sub0224.CSPLINzero.results/stats.sub0224.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          225                                                                                        \
+       "$dirA/subj.sub0225/ses-01/sub0225.CSPLINzero.results/stats.sub0225.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0225/ses-01/sub0225.CSPLINzero.results/stats.sub0225.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          226                                                                                        \
+       "$dirA/subj.sub0226/ses-01/sub0226.CSPLINzero.results/stats.sub0226.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0226/ses-01/sub0226.CSPLINzero.results/stats.sub0226.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          227                                                                                        \
+       "$dirA/subj.sub0227/ses-01/sub0227.CSPLINzero.results/stats.sub0227.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0227/ses-01/sub0227.CSPLINzero.results/stats.sub0227.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          228                                                                                        \
+       "$dirA/subj.sub0228/ses-01/sub0228.CSPLINzero.results/stats.sub0228.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0228/ses-01/sub0228.CSPLINzero.results/stats.sub0228.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          230                                                                                        \
+       "$dirA/subj.sub0230/ses-01/sub0230.CSPLINzero.results/stats.sub0230.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0230/ses-01/sub0230.CSPLINzero.results/stats.sub0230.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          231                                                                                        \
+       "$dirA/subj.sub0231/ses-01/sub0231.CSPLINzero.results/stats.sub0231.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0231/ses-01/sub0231.CSPLINzero.results/stats.sub0231.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          232                                                                                        \
+       "$dirA/subj.sub0232/ses-01/sub0232.CSPLINzero.results/stats.sub0232.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0232/ses-01/sub0232.CSPLINzero.results/stats.sub0232.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          233                                                                                        \
+       "$dirA/subj.sub0233/ses-01/sub0233.CSPLINzero.results/stats.sub0233.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0233/ses-01/sub0233.CSPLINzero.results/stats.sub0233.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          234                                                                                        \
+       "$dirA/subj.sub0234/ses-01/sub0234.CSPLINzero.results/stats.sub0234.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0234/ses-01/sub0234.CSPLINzero.results/stats.sub0234.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          235                                                                                        \
+       "$dirA/subj.sub0235/ses-01/sub0235.CSPLINzero.results/stats.sub0235.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0235/ses-01/sub0235.CSPLINzero.results/stats.sub0235.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          236                                                                                        \
+       "$dirA/subj.sub0236/ses-01/sub0236.CSPLINzero.results/stats.sub0236.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0236/ses-01/sub0236.CSPLINzero.results/stats.sub0236.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          238                                                                                        \
+       "$dirA/subj.sub0238/ses-01/sub0238.CSPLINzero.results/stats.sub0238.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0238/ses-01/sub0238.CSPLINzero.results/stats.sub0238.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          239                                                                                        \
+       "$dirA/subj.sub0239/ses-01/sub0239.CSPLINzero.results/stats.sub0239.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0239/ses-01/sub0239.CSPLINzero.results/stats.sub0239.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          240                                                                                        \
+       "$dirA/subj.sub0240/ses-01/sub0240.CSPLINzero.results/stats.sub0240.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0240/ses-01/sub0240.CSPLINzero.results/stats.sub0240.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          241                                                                                        \
+       "$dirA/subj.sub0241/ses-01/sub0241.CSPLINzero.results/stats.sub0241.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0241/ses-01/sub0241.CSPLINzero.results/stats.sub0241.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          243                                                                                        \
+       "$dirA/subj.sub0243/ses-01/sub0243.CSPLINzero.results/stats.sub0243.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0243/ses-01/sub0243.CSPLINzero.results/stats.sub0243.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          244                                                                                        \
+       "$dirA/subj.sub0244/ses-01/sub0244.CSPLINzero.results/stats.sub0244.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0244/ses-01/sub0244.CSPLINzero.results/stats.sub0244.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          245                                                                                        \
+       "$dirA/subj.sub0245/ses-01/sub0245.CSPLINzero.results/stats.sub0245.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0245/ses-01/sub0245.CSPLINzero.results/stats.sub0245.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          246                                                                                        \
+       "$dirA/subj.sub0246/ses-01/sub0246.CSPLINzero.results/stats.sub0246.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0246/ses-01/sub0246.CSPLINzero.results/stats.sub0246.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          249                                                                                        \
+       "$dirA/subj.sub0249/ses-01/sub0249.CSPLINzero.results/stats.sub0249.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0249/ses-01/sub0249.CSPLINzero.results/stats.sub0249.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          250                                                                                        \
+       "$dirA/subj.sub0250/ses-01/sub0250.CSPLINzero.results/stats.sub0250.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0250/ses-01/sub0250.CSPLINzero.results/stats.sub0250.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          251                                                                                        \
+       "$dirA/subj.sub0251/ses-01/sub0251.CSPLINzero.results/stats.sub0251.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0251/ses-01/sub0251.CSPLINzero.results/stats.sub0251.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          252                                                                                        \
+       "$dirA/subj.sub0252/ses-01/sub0252.CSPLINzero.results/stats.sub0252.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0252/ses-01/sub0252.CSPLINzero.results/stats.sub0252.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          253                                                                                        \
+       "$dirA/subj.sub0253/ses-01/sub0253.CSPLINzero.results/stats.sub0253.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0253/ses-01/sub0253.CSPLINzero.results/stats.sub0253.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          254                                                                                        \
+       "$dirA/subj.sub0254/ses-01/sub0254.CSPLINzero.results/stats.sub0254.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0254/ses-01/sub0254.CSPLINzero.results/stats.sub0254.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          255                                                                                        \
+       "$dirA/subj.sub0255/ses-01/sub0255.CSPLINzero.results/stats.sub0255.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0255/ses-01/sub0255.CSPLINzero.results/stats.sub0255.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          257                                                                                        \
+       "$dirA/subj.sub0257/ses-01/sub0257.CSPLINzero.results/stats.sub0257.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0257/ses-01/sub0257.CSPLINzero.results/stats.sub0257.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          258                                                                                        \
+       "$dirA/subj.sub0258/ses-01/sub0258.CSPLINzero.results/stats.sub0258.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0258/ses-01/sub0258.CSPLINzero.results/stats.sub0258.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          259                                                                                        \
+       "$dirA/subj.sub0259/ses-01/sub0259.CSPLINzero.results/stats.sub0259.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0259/ses-01/sub0259.CSPLINzero.results/stats.sub0259.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          260                                                                                        \
+       "$dirA/subj.sub0260/ses-01/sub0260.CSPLINzero.results/stats.sub0260.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0260/ses-01/sub0260.CSPLINzero.results/stats.sub0260.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          261                                                                                        \
+       "$dirA/subj.sub0261/ses-01/sub0261.CSPLINzero.results/stats.sub0261.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0261/ses-01/sub0261.CSPLINzero.results/stats.sub0261.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          262                                                                                        \
+       "$dirA/subj.sub0262/ses-01/sub0262.CSPLINzero.results/stats.sub0262.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0262/ses-01/sub0262.CSPLINzero.results/stats.sub0262.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          263                                                                                        \
+       "$dirA/subj.sub0263/ses-01/sub0263.CSPLINzero.results/stats.sub0263.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0263/ses-01/sub0263.CSPLINzero.results/stats.sub0263.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          264                                                                                        \
+       "$dirA/subj.sub0264/ses-01/sub0264.CSPLINzero.results/stats.sub0264.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0264/ses-01/sub0264.CSPLINzero.results/stats.sub0264.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          265                                                                                        \
+       "$dirA/subj.sub0265/ses-01/sub0265.CSPLINzero.results/stats.sub0265.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0265/ses-01/sub0265.CSPLINzero.results/stats.sub0265.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          266                                                                                        \
+       "$dirA/subj.sub0266/ses-01/sub0266.CSPLINzero.results/stats.sub0266.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0266/ses-01/sub0266.CSPLINzero.results/stats.sub0266.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          267                                                                                        \
+       "$dirA/subj.sub0267/ses-01/sub0267.CSPLINzero.results/stats.sub0267.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0267/ses-01/sub0267.CSPLINzero.results/stats.sub0267.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          268                                                                                        \
+       "$dirA/subj.sub0268/ses-01/sub0268.CSPLINzero.results/stats.sub0268.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0268/ses-01/sub0268.CSPLINzero.results/stats.sub0268.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          269                                                                                        \
+       "$dirA/subj.sub0269/ses-01/sub0269.CSPLINzero.results/stats.sub0269.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0269/ses-01/sub0269.CSPLINzero.results/stats.sub0269.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          270                                                                                        \
+       "$dirA/subj.sub0270/ses-01/sub0270.CSPLINzero.results/stats.sub0270.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0270/ses-01/sub0270.CSPLINzero.results/stats.sub0270.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          271                                                                                        \
+       "$dirA/subj.sub0271/ses-01/sub0271.CSPLINzero.results/stats.sub0271.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0271/ses-01/sub0271.CSPLINzero.results/stats.sub0271.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          272                                                                                        \
+       "$dirA/subj.sub0272/ses-01/sub0272.CSPLINzero.results/stats.sub0272.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0272/ses-01/sub0272.CSPLINzero.results/stats.sub0272.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          273                                                                                        \
+       "$dirA/subj.sub0273/ses-01/sub0273.CSPLINzero.results/stats.sub0273.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0273/ses-01/sub0273.CSPLINzero.results/stats.sub0273.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          274                                                                                        \
+       "$dirA/subj.sub0274/ses-01/sub0274.CSPLINzero.results/stats.sub0274.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0274/ses-01/sub0274.CSPLINzero.results/stats.sub0274.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          275                                                                                        \
+       "$dirA/subj.sub0275/ses-01/sub0275.CSPLINzero.results/stats.sub0275.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0275/ses-01/sub0275.CSPLINzero.results/stats.sub0275.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          276                                                                                        \
+       "$dirA/subj.sub0276/ses-01/sub0276.CSPLINzero.results/stats.sub0276.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0276/ses-01/sub0276.CSPLINzero.results/stats.sub0276.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          277                                                                                        \
+       "$dirA/subj.sub0277/ses-01/sub0277.CSPLINzero.results/stats.sub0277.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0277/ses-01/sub0277.CSPLINzero.results/stats.sub0277.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          278                                                                                        \
+       "$dirA/subj.sub0278/ses-01/sub0278.CSPLINzero.results/stats.sub0278.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0278/ses-01/sub0278.CSPLINzero.results/stats.sub0278.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          279                                                                                        \
+       "$dirA/subj.sub0279/ses-01/sub0279.CSPLINzero.results/stats.sub0279.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0279/ses-01/sub0279.CSPLINzero.results/stats.sub0279.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          280                                                                                        \
+       "$dirA/subj.sub0280/ses-01/sub0280.CSPLINzero.results/stats.sub0280.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0280/ses-01/sub0280.CSPLINzero.results/stats.sub0280.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          281                                                                                        \
+       "$dirA/subj.sub0281/ses-01/sub0281.CSPLINzero.results/stats.sub0281.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0281/ses-01/sub0281.CSPLINzero.results/stats.sub0281.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          282                                                                                        \
+       "$dirA/subj.sub0282/ses-01/sub0282.CSPLINzero.results/stats.sub0282.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0282/ses-01/sub0282.CSPLINzero.results/stats.sub0282.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          283                                                                                        \
+       "$dirA/subj.sub0283/ses-01/sub0283.CSPLINzero.results/stats.sub0283.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0283/ses-01/sub0283.CSPLINzero.results/stats.sub0283.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          285                                                                                        \
+       "$dirA/subj.sub0285/ses-01/sub0285.CSPLINzero.results/stats.sub0285.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0285/ses-01/sub0285.CSPLINzero.results/stats.sub0285.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          286                                                                                        \
+       "$dirA/subj.sub0286/ses-01/sub0286.CSPLINzero.results/stats.sub0286.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0286/ses-01/sub0286.CSPLINzero.results/stats.sub0286.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          287                                                                                        \
+       "$dirA/subj.sub0287/ses-01/sub0287.CSPLINzero.results/stats.sub0287.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0287/ses-01/sub0287.CSPLINzero.results/stats.sub0287.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          288                                                                                        \
+       "$dirA/subj.sub0288/ses-01/sub0288.CSPLINzero.results/stats.sub0288.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0288/ses-01/sub0288.CSPLINzero.results/stats.sub0288.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          289                                                                                        \
+       "$dirA/subj.sub0289/ses-01/sub0289.CSPLINzero.results/stats.sub0289.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0289/ses-01/sub0289.CSPLINzero.results/stats.sub0289.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          290                                                                                        \
+       "$dirA/subj.sub0290/ses-01/sub0290.CSPLINzero.results/stats.sub0290.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0290/ses-01/sub0290.CSPLINzero.results/stats.sub0290.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          291                                                                                        \
+       "$dirA/subj.sub0291/ses-01/sub0291.CSPLINzero.results/stats.sub0291.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0291/ses-01/sub0291.CSPLINzero.results/stats.sub0291.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          292                                                                                        \
+       "$dirA/subj.sub0292/ses-01/sub0292.CSPLINzero.results/stats.sub0292.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0292/ses-01/sub0292.CSPLINzero.results/stats.sub0292.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          293                                                                                        \
+       "$dirA/subj.sub0293/ses-01/sub0293.CSPLINzero.results/stats.sub0293.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0293/ses-01/sub0293.CSPLINzero.results/stats.sub0293.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          294                                                                                        \
+       "$dirA/subj.sub0294/ses-01/sub0294.CSPLINzero.results/stats.sub0294.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0294/ses-01/sub0294.CSPLINzero.results/stats.sub0294.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          295                                                                                        \
+       "$dirA/subj.sub0295/ses-01/sub0295.CSPLINzero.results/stats.sub0295.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0295/ses-01/sub0295.CSPLINzero.results/stats.sub0295.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          296                                                                                        \
+       "$dirA/subj.sub0296/ses-01/sub0296.CSPLINzero.results/stats.sub0296.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0296/ses-01/sub0296.CSPLINzero.results/stats.sub0296.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          297                                                                                        \
+       "$dirA/subj.sub0297/ses-01/sub0297.CSPLINzero.results/stats.sub0297.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0297/ses-01/sub0297.CSPLINzero.results/stats.sub0297.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          298                                                                                        \
+       "$dirA/subj.sub0298/ses-01/sub0298.CSPLINzero.results/stats.sub0298.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0298/ses-01/sub0298.CSPLINzero.results/stats.sub0298.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          299                                                                                        \
+       "$dirA/subj.sub0299/ses-01/sub0299.CSPLINzero.results/stats.sub0299.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0299/ses-01/sub0299.CSPLINzero.results/stats.sub0299.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          300                                                                                        \
+       "$dirA/subj.sub0300/ses-01/sub0300.CSPLINzero.results/stats.sub0300.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0300/ses-01/sub0300.CSPLINzero.results/stats.sub0300.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          301                                                                                        \
+       "$dirA/subj.sub0301/ses-01/sub0301.CSPLINzero.results/stats.sub0301.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0301/ses-01/sub0301.CSPLINzero.results/stats.sub0301.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          302                                                                                        \
+       "$dirA/subj.sub0302/ses-01/sub0302.CSPLINzero.results/stats.sub0302.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0302/ses-01/sub0302.CSPLINzero.results/stats.sub0302.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          303                                                                                        \
+       "$dirA/subj.sub0303/ses-01/sub0303.CSPLINzero.results/stats.sub0303.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0303/ses-01/sub0303.CSPLINzero.results/stats.sub0303.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          304                                                                                        \
+       "$dirA/subj.sub0304/ses-01/sub0304.CSPLINzero.results/stats.sub0304.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0304/ses-01/sub0304.CSPLINzero.results/stats.sub0304.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          305                                                                                        \
+       "$dirA/subj.sub0305/ses-01/sub0305.CSPLINzero.results/stats.sub0305.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0305/ses-01/sub0305.CSPLINzero.results/stats.sub0305.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          306                                                                                        \
+       "$dirA/subj.sub0306/ses-01/sub0306.CSPLINzero.results/stats.sub0306.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0306/ses-01/sub0306.CSPLINzero.results/stats.sub0306.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          307                                                                                        \
+       "$dirA/subj.sub0307/ses-01/sub0307.CSPLINzero.results/stats.sub0307.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0307/ses-01/sub0307.CSPLINzero.results/stats.sub0307.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          308                                                                                        \
+       "$dirA/subj.sub0308/ses-01/sub0308.CSPLINzero.results/stats.sub0308.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0308/ses-01/sub0308.CSPLINzero.results/stats.sub0308.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          309                                                                                        \
+       "$dirA/subj.sub0309/ses-01/sub0309.CSPLINzero.results/stats.sub0309.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0309/ses-01/sub0309.CSPLINzero.results/stats.sub0309.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          310                                                                                        \
+       "$dirA/subj.sub0310/ses-01/sub0310.CSPLINzero.results/stats.sub0310.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0310/ses-01/sub0310.CSPLINzero.results/stats.sub0310.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          311                                                                                        \
+       "$dirA/subj.sub0311/ses-01/sub0311.CSPLINzero.results/stats.sub0311.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0311/ses-01/sub0311.CSPLINzero.results/stats.sub0311.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          312                                                                                        \
+       "$dirA/subj.sub0312/ses-01/sub0312.CSPLINzero.results/stats.sub0312.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0312/ses-01/sub0312.CSPLINzero.results/stats.sub0312.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          313                                                                                        \
+       "$dirA/subj.sub0313/ses-01/sub0313.CSPLINzero.results/stats.sub0313.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0313/ses-01/sub0313.CSPLINzero.results/stats.sub0313.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          314                                                                                        \
+       "$dirA/subj.sub0314/ses-01/sub0314.CSPLINzero.results/stats.sub0314.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0314/ses-01/sub0314.CSPLINzero.results/stats.sub0314.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          315                                                                                        \
+       "$dirA/subj.sub0315/ses-01/sub0315.CSPLINzero.results/stats.sub0315.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0315/ses-01/sub0315.CSPLINzero.results/stats.sub0315.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          316                                                                                        \
+       "$dirA/subj.sub0316/ses-01/sub0316.CSPLINzero.results/stats.sub0316.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0316/ses-01/sub0316.CSPLINzero.results/stats.sub0316.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          317                                                                                        \
+       "$dirA/subj.sub0317/ses-01/sub0317.CSPLINzero.results/stats.sub0317.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0317/ses-01/sub0317.CSPLINzero.results/stats.sub0317.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          318                                                                                        \
+       "$dirA/subj.sub0318/ses-01/sub0318.CSPLINzero.results/stats.sub0318.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0318/ses-01/sub0318.CSPLINzero.results/stats.sub0318.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          319                                                                                        \
+       "$dirA/subj.sub0319/ses-01/sub0319.CSPLINzero.results/stats.sub0319.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0319/ses-01/sub0319.CSPLINzero.results/stats.sub0319.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          320                                                                                        \
+       "$dirA/subj.sub0320/ses-01/sub0320.CSPLINzero.results/stats.sub0320.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0320/ses-01/sub0320.CSPLINzero.results/stats.sub0320.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          321                                                                                        \
+       "$dirA/subj.sub0321/ses-01/sub0321.CSPLINzero.results/stats.sub0321.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0321/ses-01/sub0321.CSPLINzero.results/stats.sub0321.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          322                                                                                        \
+       "$dirA/subj.sub0322/ses-01/sub0322.CSPLINzero.results/stats.sub0322.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0322/ses-01/sub0322.CSPLINzero.results/stats.sub0322.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          323                                                                                        \
+       "$dirA/subj.sub0323/ses-01/sub0323.CSPLINzero.results/stats.sub0323.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0323/ses-01/sub0323.CSPLINzero.results/stats.sub0323.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          324                                                                                        \
+       "$dirA/subj.sub0324/ses-01/sub0324.CSPLINzero.results/stats.sub0324.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0324/ses-01/sub0324.CSPLINzero.results/stats.sub0324.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          325                                                                                        \
+       "$dirA/subj.sub0325/ses-01/sub0325.CSPLINzero.results/stats.sub0325.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0325/ses-01/sub0325.CSPLINzero.results/stats.sub0325.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          326                                                                                        \
+       "$dirA/subj.sub0326/ses-01/sub0326.CSPLINzero.results/stats.sub0326.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0326/ses-01/sub0326.CSPLINzero.results/stats.sub0326.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          327                                                                                        \
+       "$dirA/subj.sub0327/ses-01/sub0327.CSPLINzero.results/stats.sub0327.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0327/ses-01/sub0327.CSPLINzero.results/stats.sub0327.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          328                                                                                        \
+       "$dirA/subj.sub0328/ses-01/sub0328.CSPLINzero.results/stats.sub0328.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0328/ses-01/sub0328.CSPLINzero.results/stats.sub0328.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          329                                                                                        \
+       "$dirA/subj.sub0329/ses-01/sub0329.CSPLINzero.results/stats.sub0329.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0329/ses-01/sub0329.CSPLINzero.results/stats.sub0329.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          330                                                                                        \
+       "$dirA/subj.sub0330/ses-01/sub0330.CSPLINzero.results/stats.sub0330.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0330/ses-01/sub0330.CSPLINzero.results/stats.sub0330.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          331                                                                                        \
+       "$dirA/subj.sub0331/ses-01/sub0331.CSPLINzero.results/stats.sub0331.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0331/ses-01/sub0331.CSPLINzero.results/stats.sub0331.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          332                                                                                        \
+       "$dirA/subj.sub0332/ses-01/sub0332.CSPLINzero.results/stats.sub0332.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0332/ses-01/sub0332.CSPLINzero.results/stats.sub0332.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          333                                                                                        \
+       "$dirA/subj.sub0333/ses-01/sub0333.CSPLINzero.results/stats.sub0333.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0333/ses-01/sub0333.CSPLINzero.results/stats.sub0333.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          334                                                                                        \
+       "$dirA/subj.sub0334/ses-01/sub0334.CSPLINzero.results/stats.sub0334.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0334/ses-01/sub0334.CSPLINzero.results/stats.sub0334.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          335                                                                                        \
+       "$dirA/subj.sub0335/ses-01/sub0335.CSPLINzero.results/stats.sub0335.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0335/ses-01/sub0335.CSPLINzero.results/stats.sub0335.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          336                                                                                        \
+       "$dirA/subj.sub0336/ses-01/sub0336.CSPLINzero.results/stats.sub0336.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0336/ses-01/sub0336.CSPLINzero.results/stats.sub0336.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          337                                                                                        \
+       "$dirA/subj.sub0337/ses-01/sub0337.CSPLINzero.results/stats.sub0337.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0337/ses-01/sub0337.CSPLINzero.results/stats.sub0337.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          338                                                                                        \
+       "$dirA/subj.sub0338/ses-01/sub0338.CSPLINzero.results/stats.sub0338.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0338/ses-01/sub0338.CSPLINzero.results/stats.sub0338.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          339                                                                                        \
+       "$dirA/subj.sub0339/ses-01/sub0339.CSPLINzero.results/stats.sub0339.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0339/ses-01/sub0339.CSPLINzero.results/stats.sub0339.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          340                                                                                        \
+       "$dirA/subj.sub0340/ses-01/sub0340.CSPLINzero.results/stats.sub0340.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0340/ses-01/sub0340.CSPLINzero.results/stats.sub0340.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          341                                                                                        \
+       "$dirA/subj.sub0341/ses-01/sub0341.CSPLINzero.results/stats.sub0341.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0341/ses-01/sub0341.CSPLINzero.results/stats.sub0341.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          342                                                                                        \
+       "$dirA/subj.sub0342/ses-01/sub0342.CSPLINzero.results/stats.sub0342.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0342/ses-01/sub0342.CSPLINzero.results/stats.sub0342.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          343                                                                                        \
+       "$dirA/subj.sub0343/ses-01/sub0343.CSPLINzero.results/stats.sub0343.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0343/ses-01/sub0343.CSPLINzero.results/stats.sub0343.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          344                                                                                        \
+       "$dirA/subj.sub0344/ses-01/sub0344.CSPLINzero.results/stats.sub0344.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0344/ses-01/sub0344.CSPLINzero.results/stats.sub0344.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          345                                                                                        \
+       "$dirA/subj.sub0345/ses-01/sub0345.CSPLINzero.results/stats.sub0345.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0345/ses-01/sub0345.CSPLINzero.results/stats.sub0345.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          346                                                                                        \
+       "$dirA/subj.sub0346/ses-01/sub0346.CSPLINzero.results/stats.sub0346.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0346/ses-01/sub0346.CSPLINzero.results/stats.sub0346.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          347                                                                                        \
+       "$dirA/subj.sub0347/ses-01/sub0347.CSPLINzero.results/stats.sub0347.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0347/ses-01/sub0347.CSPLINzero.results/stats.sub0347.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          348                                                                                        \
+       "$dirA/subj.sub0348/ses-01/sub0348.CSPLINzero.results/stats.sub0348.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0348/ses-01/sub0348.CSPLINzero.results/stats.sub0348.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          349                                                                                        \
+       "$dirA/subj.sub0349/ses-01/sub0349.CSPLINzero.results/stats.sub0349.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0349/ses-01/sub0349.CSPLINzero.results/stats.sub0349.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          350                                                                                        \
+       "$dirA/subj.sub0350/ses-01/sub0350.CSPLINzero.results/stats.sub0350.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0350/ses-01/sub0350.CSPLINzero.results/stats.sub0350.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          351                                                                                        \
+       "$dirA/subj.sub0351/ses-01/sub0351.CSPLINzero.results/stats.sub0351.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0351/ses-01/sub0351.CSPLINzero.results/stats.sub0351.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          352                                                                                        \
+       "$dirA/subj.sub0352/ses-01/sub0352.CSPLINzero.results/stats.sub0352.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0352/ses-01/sub0352.CSPLINzero.results/stats.sub0352.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          353                                                                                        \
+       "$dirA/subj.sub0353/ses-01/sub0353.CSPLINzero.results/stats.sub0353.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0353/ses-01/sub0353.CSPLINzero.results/stats.sub0353.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          354                                                                                        \
+       "$dirA/subj.sub0354/ses-01/sub0354.CSPLINzero.results/stats.sub0354.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0354/ses-01/sub0354.CSPLINzero.results/stats.sub0354.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          355                                                                                        \
+       "$dirA/subj.sub0355/ses-01/sub0355.CSPLINzero.results/stats.sub0355.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0355/ses-01/sub0355.CSPLINzero.results/stats.sub0355.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          356                                                                                        \
+       "$dirA/subj.sub0356/ses-01/sub0356.CSPLINzero.results/stats.sub0356.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0356/ses-01/sub0356.CSPLINzero.results/stats.sub0356.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          357                                                                                        \
+       "$dirA/subj.sub0357/ses-01/sub0357.CSPLINzero.results/stats.sub0357.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0357/ses-01/sub0357.CSPLINzero.results/stats.sub0357.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          358                                                                                        \
+       "$dirA/subj.sub0358/ses-01/sub0358.CSPLINzero.results/stats.sub0358.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0358/ses-01/sub0358.CSPLINzero.results/stats.sub0358.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          359                                                                                        \
+       "$dirA/subj.sub0359/ses-01/sub0359.CSPLINzero.results/stats.sub0359.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0359/ses-01/sub0359.CSPLINzero.results/stats.sub0359.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          360                                                                                        \
+       "$dirA/subj.sub0360/ses-01/sub0360.CSPLINzero.results/stats.sub0360.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0360/ses-01/sub0360.CSPLINzero.results/stats.sub0360.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          361                                                                                        \
+       "$dirA/subj.sub0361/ses-01/sub0361.CSPLINzero.results/stats.sub0361.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0361/ses-01/sub0361.CSPLINzero.results/stats.sub0361.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          362                                                                                        \
+       "$dirA/subj.sub0362/ses-01/sub0362.CSPLINzero.results/stats.sub0362.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0362/ses-01/sub0362.CSPLINzero.results/stats.sub0362.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          363                                                                                        \
+       "$dirA/subj.sub0363/ses-01/sub0363.CSPLINzero.results/stats.sub0363.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0363/ses-01/sub0363.CSPLINzero.results/stats.sub0363.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          364                                                                                        \
+       "$dirA/subj.sub0364/ses-01/sub0364.CSPLINzero.results/stats.sub0364.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0364/ses-01/sub0364.CSPLINzero.results/stats.sub0364.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          365                                                                                        \
+       "$dirA/subj.sub0365/ses-01/sub0365.CSPLINzero.results/stats.sub0365.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0365/ses-01/sub0365.CSPLINzero.results/stats.sub0365.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          366                                                                                        \
+       "$dirA/subj.sub0366/ses-01/sub0366.CSPLINzero.results/stats.sub0366.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0366/ses-01/sub0366.CSPLINzero.results/stats.sub0366.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          367                                                                                        \
+       "$dirA/subj.sub0367/ses-01/sub0367.CSPLINzero.results/stats.sub0367.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0367/ses-01/sub0367.CSPLINzero.results/stats.sub0367.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          368                                                                                        \
+       "$dirA/subj.sub0368/ses-01/sub0368.CSPLINzero.results/stats.sub0368.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0368/ses-01/sub0368.CSPLINzero.results/stats.sub0368.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          369                                                                                        \
+       "$dirA/subj.sub0369/ses-01/sub0369.CSPLINzero.results/stats.sub0369.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0369/ses-01/sub0369.CSPLINzero.results/stats.sub0369.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          370                                                                                        \
+       "$dirA/subj.sub0370/ses-01/sub0370.CSPLINzero.results/stats.sub0370.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0370/ses-01/sub0370.CSPLINzero.results/stats.sub0370.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          371                                                                                        \
+       "$dirA/subj.sub0371/ses-01/sub0371.CSPLINzero.results/stats.sub0371.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0371/ses-01/sub0371.CSPLINzero.results/stats.sub0371.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          372                                                                                        \
+       "$dirA/subj.sub0372/ses-01/sub0372.CSPLINzero.results/stats.sub0372.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0372/ses-01/sub0372.CSPLINzero.results/stats.sub0372.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          373                                                                                        \
+       "$dirA/subj.sub0373/ses-01/sub0373.CSPLINzero.results/stats.sub0373.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0373/ses-01/sub0373.CSPLINzero.results/stats.sub0373.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          374                                                                                        \
+       "$dirA/subj.sub0374/ses-01/sub0374.CSPLINzero.results/stats.sub0374.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0374/ses-01/sub0374.CSPLINzero.results/stats.sub0374.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          375                                                                                        \
+       "$dirA/subj.sub0375/ses-01/sub0375.CSPLINzero.results/stats.sub0375.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0375/ses-01/sub0375.CSPLINzero.results/stats.sub0375.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          376                                                                                        \
+       "$dirA/subj.sub0376/ses-01/sub0376.CSPLINzero.results/stats.sub0376.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0376/ses-01/sub0376.CSPLINzero.results/stats.sub0376.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          377                                                                                        \
+       "$dirA/subj.sub0377/ses-01/sub0377.CSPLINzero.results/stats.sub0377.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0377/ses-01/sub0377.CSPLINzero.results/stats.sub0377.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          378                                                                                        \
+       "$dirA/subj.sub0378/ses-01/sub0378.CSPLINzero.results/stats.sub0378.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0378/ses-01/sub0378.CSPLINzero.results/stats.sub0378.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          379                                                                                        \
+       "$dirA/subj.sub0379/ses-01/sub0379.CSPLINzero.results/stats.sub0379.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0379/ses-01/sub0379.CSPLINzero.results/stats.sub0379.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          380                                                                                        \
+       "$dirA/subj.sub0380/ses-01/sub0380.CSPLINzero.results/stats.sub0380.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0380/ses-01/sub0380.CSPLINzero.results/stats.sub0380.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          381                                                                                        \
+       "$dirA/subj.sub0381/ses-01/sub0381.CSPLINzero.results/stats.sub0381.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0381/ses-01/sub0381.CSPLINzero.results/stats.sub0381.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          382                                                                                        \
+       "$dirA/subj.sub0382/ses-01/sub0382.CSPLINzero.results/stats.sub0382.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0382/ses-01/sub0382.CSPLINzero.results/stats.sub0382.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          383                                                                                        \
+       "$dirA/subj.sub0383/ses-01/sub0383.CSPLINzero.results/stats.sub0383.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0383/ses-01/sub0383.CSPLINzero.results/stats.sub0383.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          384                                                                                        \
+       "$dirA/subj.sub0384/ses-01/sub0384.CSPLINzero.results/stats.sub0384.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0384/ses-01/sub0384.CSPLINzero.results/stats.sub0384.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          385                                                                                        \
+       "$dirA/subj.sub0385/ses-01/sub0385.CSPLINzero.results/stats.sub0385.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0385/ses-01/sub0385.CSPLINzero.results/stats.sub0385.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          386                                                                                        \
+       "$dirA/subj.sub0386/ses-01/sub0386.CSPLINzero.results/stats.sub0386.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0386/ses-01/sub0386.CSPLINzero.results/stats.sub0386.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          387                                                                                        \
+       "$dirA/subj.sub0387/ses-01/sub0387.CSPLINzero.results/stats.sub0387.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0387/ses-01/sub0387.CSPLINzero.results/stats.sub0387.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          388                                                                                        \
+       "$dirA/subj.sub0388/ses-01/sub0388.CSPLINzero.results/stats.sub0388.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0388/ses-01/sub0388.CSPLINzero.results/stats.sub0388.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          389                                                                                        \
+       "$dirA/subj.sub0389/ses-01/sub0389.CSPLINzero.results/stats.sub0389.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0389/ses-01/sub0389.CSPLINzero.results/stats.sub0389.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          390                                                                                        \
+       "$dirA/subj.sub0390/ses-01/sub0390.CSPLINzero.results/stats.sub0390.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0390/ses-01/sub0390.CSPLINzero.results/stats.sub0390.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          391                                                                                        \
+       "$dirA/subj.sub0391/ses-01/sub0391.CSPLINzero.results/stats.sub0391.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0391/ses-01/sub0391.CSPLINzero.results/stats.sub0391.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          392                                                                                        \
+       "$dirA/subj.sub0392/ses-01/sub0392.CSPLINzero.results/stats.sub0392.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0392/ses-01/sub0392.CSPLINzero.results/stats.sub0392.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          393                                                                                        \
+       "$dirA/subj.sub0393/ses-01/sub0393.CSPLINzero.results/stats.sub0393.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0393/ses-01/sub0393.CSPLINzero.results/stats.sub0393.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          394                                                                                        \
+       "$dirA/subj.sub0394/ses-01/sub0394.CSPLINzero.results/stats.sub0394.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0394/ses-01/sub0394.CSPLINzero.results/stats.sub0394.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          395                                                                                        \
+       "$dirA/subj.sub0395/ses-01/sub0395.CSPLINzero.results/stats.sub0395.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0395/ses-01/sub0395.CSPLINzero.results/stats.sub0395.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          396                                                                                        \
+       "$dirA/subj.sub0396/ses-01/sub0396.CSPLINzero.results/stats.sub0396.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0396/ses-01/sub0396.CSPLINzero.results/stats.sub0396.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          397                                                                                        \
+       "$dirA/subj.sub0397/ses-01/sub0397.CSPLINzero.results/stats.sub0397.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0397/ses-01/sub0397.CSPLINzero.results/stats.sub0397.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          398                                                                                        \
+       "$dirA/subj.sub0398/ses-01/sub0398.CSPLINzero.results/stats.sub0398.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0398/ses-01/sub0398.CSPLINzero.results/stats.sub0398.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          399                                                                                        \
+       "$dirA/subj.sub0399/ses-01/sub0399.CSPLINzero.results/stats.sub0399.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0399/ses-01/sub0399.CSPLINzero.results/stats.sub0399.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          400                                                                                        \
+       "$dirA/subj.sub0400/ses-01/sub0400.CSPLINzero.results/stats.sub0400.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0400/ses-01/sub0400.CSPLINzero.results/stats.sub0400.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          401                                                                                        \
+       "$dirA/subj.sub0401/ses-01/sub0401.CSPLINzero.results/stats.sub0401.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0401/ses-01/sub0401.CSPLINzero.results/stats.sub0401.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          402                                                                                        \
+       "$dirA/subj.sub0402/ses-01/sub0402.CSPLINzero.results/stats.sub0402.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0402/ses-01/sub0402.CSPLINzero.results/stats.sub0402.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          403                                                                                        \
+       "$dirA/subj.sub0403/ses-01/sub0403.CSPLINzero.results/stats.sub0403.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0403/ses-01/sub0403.CSPLINzero.results/stats.sub0403.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          404                                                                                        \
+       "$dirA/subj.sub0404/ses-01/sub0404.CSPLINzero.results/stats.sub0404.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0404/ses-01/sub0404.CSPLINzero.results/stats.sub0404.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          405                                                                                        \
+       "$dirA/subj.sub0405/ses-01/sub0405.CSPLINzero.results/stats.sub0405.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0405/ses-01/sub0405.CSPLINzero.results/stats.sub0405.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          406                                                                                        \
+       "$dirA/subj.sub0406/ses-01/sub0406.CSPLINzero.results/stats.sub0406.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0406/ses-01/sub0406.CSPLINzero.results/stats.sub0406.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          407                                                                                        \
+       "$dirA/subj.sub0407/ses-01/sub0407.CSPLINzero.results/stats.sub0407.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0407/ses-01/sub0407.CSPLINzero.results/stats.sub0407.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          408                                                                                        \
+       "$dirA/subj.sub0408/ses-01/sub0408.CSPLINzero.results/stats.sub0408.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0408/ses-01/sub0408.CSPLINzero.results/stats.sub0408.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          409                                                                                        \
+       "$dirA/subj.sub0409/ses-01/sub0409.CSPLINzero.results/stats.sub0409.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0409/ses-01/sub0409.CSPLINzero.results/stats.sub0409.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          410                                                                                        \
+       "$dirA/subj.sub0410/ses-01/sub0410.CSPLINzero.results/stats.sub0410.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0410/ses-01/sub0410.CSPLINzero.results/stats.sub0410.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          411                                                                                        \
+       "$dirA/subj.sub0411/ses-01/sub0411.CSPLINzero.results/stats.sub0411.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0411/ses-01/sub0411.CSPLINzero.results/stats.sub0411.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          412                                                                                        \
+       "$dirA/subj.sub0412/ses-01/sub0412.CSPLINzero.results/stats.sub0412.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0412/ses-01/sub0412.CSPLINzero.results/stats.sub0412.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          413                                                                                        \
+       "$dirA/subj.sub0413/ses-01/sub0413.CSPLINzero.results/stats.sub0413.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0413/ses-01/sub0413.CSPLINzero.results/stats.sub0413.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          414                                                                                        \
+       "$dirA/subj.sub0414/ses-01/sub0414.CSPLINzero.results/stats.sub0414.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0414/ses-01/sub0414.CSPLINzero.results/stats.sub0414.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          415                                                                                        \
+       "$dirA/subj.sub0415/ses-01/sub0415.CSPLINzero.results/stats.sub0415.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0415/ses-01/sub0415.CSPLINzero.results/stats.sub0415.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          416                                                                                        \
+       "$dirA/subj.sub0416/ses-01/sub0416.CSPLINzero.results/stats.sub0416.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0416/ses-01/sub0416.CSPLINzero.results/stats.sub0416.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          417                                                                                        \
+       "$dirA/subj.sub0417/ses-01/sub0417.CSPLINzero.results/stats.sub0417.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0417/ses-01/sub0417.CSPLINzero.results/stats.sub0417.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          418                                                                                        \
+       "$dirA/subj.sub0418/ses-01/sub0418.CSPLINzero.results/stats.sub0418.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0418/ses-01/sub0418.CSPLINzero.results/stats.sub0418.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          419                                                                                        \
+       "$dirA/subj.sub0419/ses-01/sub0419.CSPLINzero.results/stats.sub0419.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0419/ses-01/sub0419.CSPLINzero.results/stats.sub0419.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          420                                                                                        \
+       "$dirA/subj.sub0420/ses-01/sub0420.CSPLINzero.results/stats.sub0420.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0420/ses-01/sub0420.CSPLINzero.results/stats.sub0420.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          421                                                                                        \
+       "$dirA/subj.sub0421/ses-01/sub0421.CSPLINzero.results/stats.sub0421.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0421/ses-01/sub0421.CSPLINzero.results/stats.sub0421.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          422                                                                                        \
+       "$dirA/subj.sub0422/ses-01/sub0422.CSPLINzero.results/stats.sub0422.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0422/ses-01/sub0422.CSPLINzero.results/stats.sub0422.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          423                                                                                        \
+       "$dirA/subj.sub0423/ses-01/sub0423.CSPLINzero.results/stats.sub0423.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0423/ses-01/sub0423.CSPLINzero.results/stats.sub0423.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          424                                                                                        \
+       "$dirA/subj.sub0424/ses-01/sub0424.CSPLINzero.results/stats.sub0424.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0424/ses-01/sub0424.CSPLINzero.results/stats.sub0424.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          426                                                                                        \
+       "$dirA/subj.sub0426/ses-01/sub0426.CSPLINzero.results/stats.sub0426.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0426/ses-01/sub0426.CSPLINzero.results/stats.sub0426.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          427                                                                                        \
+       "$dirA/subj.sub0427/ses-01/sub0427.CSPLINzero.results/stats.sub0427.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0427/ses-01/sub0427.CSPLINzero.results/stats.sub0427.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          428                                                                                        \
+       "$dirA/subj.sub0428/ses-01/sub0428.CSPLINzero.results/stats.sub0428.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0428/ses-01/sub0428.CSPLINzero.results/stats.sub0428.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          429                                                                                        \
+       "$dirA/subj.sub0429/ses-01/sub0429.CSPLINzero.results/stats.sub0429.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0429/ses-01/sub0429.CSPLINzero.results/stats.sub0429.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          430                                                                                        \
+       "$dirA/subj.sub0430/ses-01/sub0430.CSPLINzero.results/stats.sub0430.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0430/ses-01/sub0430.CSPLINzero.results/stats.sub0430.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          431                                                                                        \
+       "$dirA/subj.sub0431/ses-01/sub0431.CSPLINzero.results/stats.sub0431.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0431/ses-01/sub0431.CSPLINzero.results/stats.sub0431.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          432                                                                                        \
+       "$dirA/subj.sub0432/ses-01/sub0432.CSPLINzero.results/stats.sub0432.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0432/ses-01/sub0432.CSPLINzero.results/stats.sub0432.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          433                                                                                        \
+       "$dirA/subj.sub0433/ses-01/sub0433.CSPLINzero.results/stats.sub0433.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0433/ses-01/sub0433.CSPLINzero.results/stats.sub0433.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          434                                                                                        \
+       "$dirA/subj.sub0434/ses-01/sub0434.CSPLINzero.results/stats.sub0434.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0434/ses-01/sub0434.CSPLINzero.results/stats.sub0434.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          435                                                                                        \
+       "$dirA/subj.sub0435/ses-01/sub0435.CSPLINzero.results/stats.sub0435.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0435/ses-01/sub0435.CSPLINzero.results/stats.sub0435.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          436                                                                                        \
+       "$dirA/subj.sub0436/ses-01/sub0436.CSPLINzero.results/stats.sub0436.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0436/ses-01/sub0436.CSPLINzero.results/stats.sub0436.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          437                                                                                        \
+       "$dirA/subj.sub0437/ses-01/sub0437.CSPLINzero.results/stats.sub0437.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0437/ses-01/sub0437.CSPLINzero.results/stats.sub0437.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          438                                                                                        \
+       "$dirA/subj.sub0438/ses-01/sub0438.CSPLINzero.results/stats.sub0438.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0438/ses-01/sub0438.CSPLINzero.results/stats.sub0438.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          439                                                                                        \
+       "$dirA/subj.sub0439/ses-01/sub0439.CSPLINzero.results/stats.sub0439.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0439/ses-01/sub0439.CSPLINzero.results/stats.sub0439.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          440                                                                                        \
+       "$dirA/subj.sub0440/ses-01/sub0440.CSPLINzero.results/stats.sub0440.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0440/ses-01/sub0440.CSPLINzero.results/stats.sub0440.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          441                                                                                        \
+       "$dirA/subj.sub0441/ses-01/sub0441.CSPLINzero.results/stats.sub0441.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0441/ses-01/sub0441.CSPLINzero.results/stats.sub0441.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          442                                                                                        \
+       "$dirA/subj.sub0442/ses-01/sub0442.CSPLINzero.results/stats.sub0442.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0442/ses-01/sub0442.CSPLINzero.results/stats.sub0442.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          443                                                                                        \
+       "$dirA/subj.sub0443/ses-01/sub0443.CSPLINzero.results/stats.sub0443.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0443/ses-01/sub0443.CSPLINzero.results/stats.sub0443.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          444                                                                                        \
+       "$dirA/subj.sub0444/ses-01/sub0444.CSPLINzero.results/stats.sub0444.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0444/ses-01/sub0444.CSPLINzero.results/stats.sub0444.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          445                                                                                        \
+       "$dirA/subj.sub0445/ses-01/sub0445.CSPLINzero.results/stats.sub0445.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0445/ses-01/sub0445.CSPLINzero.results/stats.sub0445.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          447                                                                                        \
+       "$dirA/subj.sub0447/ses-01/sub0447.CSPLINzero.results/stats.sub0447.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0447/ses-01/sub0447.CSPLINzero.results/stats.sub0447.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          448                                                                                        \
+       "$dirA/subj.sub0448/ses-01/sub0448.CSPLINzero.results/stats.sub0448.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0448/ses-01/sub0448.CSPLINzero.results/stats.sub0448.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          449                                                                                        \
+       "$dirA/subj.sub0449/ses-01/sub0449.CSPLINzero.results/stats.sub0449.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0449/ses-01/sub0449.CSPLINzero.results/stats.sub0449.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          450                                                                                        \
+       "$dirA/subj.sub0450/ses-01/sub0450.CSPLINzero.results/stats.sub0450.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0450/ses-01/sub0450.CSPLINzero.results/stats.sub0450.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          451                                                                                        \
+       "$dirA/subj.sub0451/ses-01/sub0451.CSPLINzero.results/stats.sub0451.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0451/ses-01/sub0451.CSPLINzero.results/stats.sub0451.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          452                                                                                        \
+       "$dirA/subj.sub0452/ses-01/sub0452.CSPLINzero.results/stats.sub0452.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0452/ses-01/sub0452.CSPLINzero.results/stats.sub0452.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          453                                                                                        \
+       "$dirA/subj.sub0453/ses-01/sub0453.CSPLINzero.results/stats.sub0453.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0453/ses-01/sub0453.CSPLINzero.results/stats.sub0453.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          454                                                                                        \
+       "$dirA/subj.sub0454/ses-01/sub0454.CSPLINzero.results/stats.sub0454.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0454/ses-01/sub0454.CSPLINzero.results/stats.sub0454.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          455                                                                                        \
+       "$dirA/subj.sub0455/ses-01/sub0455.CSPLINzero.results/stats.sub0455.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0455/ses-01/sub0455.CSPLINzero.results/stats.sub0455.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          456                                                                                        \
+       "$dirA/subj.sub0456/ses-01/sub0456.CSPLINzero.results/stats.sub0456.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0456/ses-01/sub0456.CSPLINzero.results/stats.sub0456.CSPLINzero_REML+tlrc[94]" \
+                                                                                                     \
+          457                                                                                        \
+       "$dirA/subj.sub0457/ses-01/sub0457.CSPLINzero.results/stats.sub0457.CSPLINzero_REML+tlrc[93]" \
+       "$dirA/subj.sub0457/ses-01/sub0457.CSPLINzero.results/stats.sub0457.CSPLINzero_REML+tlrc[94]" \
+		-jobs 20 \
+

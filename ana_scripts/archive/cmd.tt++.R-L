@@ -1,0 +1,771 @@
+# apply any data directories with variables
+set data_dir = ../out/afni/subject_results
+
+3dttest++                                                                                                  \
+   -prefix                                                                                                 \
+   ../out/afni/subject_results/group_results/test.CSPLINzero.ttest++_N=254.R-L.results/stats.tt++.         \
+   -setA R-L                                                                                               \
+      001                                                                                                  \
+   "$data_dir/subj.sub0001/sub0001.CSPLINzero.results/stats.sub0001.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      002                                                                                                  \
+   "$data_dir/subj.sub0002/sub0002.CSPLINzero.results/stats.sub0002.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      003                                                                                                  \
+   "$data_dir/subj.sub0003/sub0003.CSPLINzero.results/stats.sub0003.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      004                                                                                                  \
+   "$data_dir/subj.sub0004/sub0004.CSPLINzero.results/stats.sub0004.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      005                                                                                                  \
+   "$data_dir/subj.sub0005/sub0005.CSPLINzero.results/stats.sub0005.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      006                                                                                                  \
+   "$data_dir/subj.sub0006/sub0006.CSPLINzero.results/stats.sub0006.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      007                                                                                                  \
+   "$data_dir/subj.sub0007/sub0007.CSPLINzero.results/stats.sub0007.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      008                                                                                                  \
+   "$data_dir/subj.sub0008/sub0008.CSPLINzero.results/stats.sub0008.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      009                                                                                                  \
+   "$data_dir/subj.sub0009/sub0009.CSPLINzero.results/stats.sub0009.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      010                                                                                                  \
+   "$data_dir/subj.sub0010/sub0010.CSPLINzero.results/stats.sub0010.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      011                                                                                                  \
+   "$data_dir/subj.sub0011/sub0011.CSPLINzero.results/stats.sub0011.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      012                                                                                                  \
+   "$data_dir/subj.sub0012/sub0012.CSPLINzero.results/stats.sub0012.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      013                                                                                                  \
+   "$data_dir/subj.sub0013/sub0013.CSPLINzero.results/stats.sub0013.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      015                                                                                                  \
+   "$data_dir/subj.sub0015/sub0015.CSPLINzero.results/stats.sub0015.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      016                                                                                                  \
+   "$data_dir/subj.sub0016/sub0016.CSPLINzero.results/stats.sub0016.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      017                                                                                                  \
+   "$data_dir/subj.sub0017/sub0017.CSPLINzero.results/stats.sub0017.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      018                                                                                                  \
+   "$data_dir/subj.sub0018/sub0018.CSPLINzero.results/stats.sub0018.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      019                                                                                                  \
+   "$data_dir/subj.sub0019/sub0019.CSPLINzero.results/stats.sub0019.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      021                                                                                                  \
+   "$data_dir/subj.sub0021/sub0021.CSPLINzero.results/stats.sub0021.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      022                                                                                                  \
+   "$data_dir/subj.sub0022/sub0022.CSPLINzero.results/stats.sub0022.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      023                                                                                                  \
+   "$data_dir/subj.sub0023/sub0023.CSPLINzero.results/stats.sub0023.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      024                                                                                                  \
+   "$data_dir/subj.sub0024/sub0024.CSPLINzero.results/stats.sub0024.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      025                                                                                                  \
+   "$data_dir/subj.sub0025/sub0025.CSPLINzero.results/stats.sub0025.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      026                                                                                                  \
+   "$data_dir/subj.sub0026/sub0026.CSPLINzero.results/stats.sub0026.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      027                                                                                                  \
+   "$data_dir/subj.sub0027/sub0027.CSPLINzero.results/stats.sub0027.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      028                                                                                                  \
+   "$data_dir/subj.sub0028/sub0028.CSPLINzero.results/stats.sub0028.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      029                                                                                                  \
+   "$data_dir/subj.sub0029/sub0029.CSPLINzero.results/stats.sub0029.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      030                                                                                                  \
+   "$data_dir/subj.sub0030/sub0030.CSPLINzero.results/stats.sub0030.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      031                                                                                                  \
+   "$data_dir/subj.sub0031/sub0031.CSPLINzero.results/stats.sub0031.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      032                                                                                                  \
+   "$data_dir/subj.sub0032/sub0032.CSPLINzero.results/stats.sub0032.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      033                                                                                                  \
+   "$data_dir/subj.sub0033/sub0033.CSPLINzero.results/stats.sub0033.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      034                                                                                                  \
+   "$data_dir/subj.sub0034/sub0034.CSPLINzero.results/stats.sub0034.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      035                                                                                                  \
+   "$data_dir/subj.sub0035/sub0035.CSPLINzero.results/stats.sub0035.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      036                                                                                                  \
+   "$data_dir/subj.sub0036/sub0036.CSPLINzero.results/stats.sub0036.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      038                                                                                                  \
+   "$data_dir/subj.sub0038/sub0038.CSPLINzero.results/stats.sub0038.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      039                                                                                                  \
+   "$data_dir/subj.sub0039/sub0039.CSPLINzero.results/stats.sub0039.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      040                                                                                                  \
+   "$data_dir/subj.sub0040/sub0040.CSPLINzero.results/stats.sub0040.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      042                                                                                                  \
+   "$data_dir/subj.sub0042/sub0042.CSPLINzero.results/stats.sub0042.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      043                                                                                                  \
+   "$data_dir/subj.sub0043/sub0043.CSPLINzero.results/stats.sub0043.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      044                                                                                                  \
+   "$data_dir/subj.sub0044/sub0044.CSPLINzero.results/stats.sub0044.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      045                                                                                                  \
+   "$data_dir/subj.sub0045/sub0045.CSPLINzero.results/stats.sub0045.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      046                                                                                                  \
+   "$data_dir/subj.sub0046/sub0046.CSPLINzero.results/stats.sub0046.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      047                                                                                                  \
+   "$data_dir/subj.sub0047/sub0047.CSPLINzero.results/stats.sub0047.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      048                                                                                                  \
+   "$data_dir/subj.sub0048/sub0048.CSPLINzero.results/stats.sub0048.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      049                                                                                                  \
+   "$data_dir/subj.sub0049/sub0049.CSPLINzero.results/stats.sub0049.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      050                                                                                                  \
+   "$data_dir/subj.sub0050/sub0050.CSPLINzero.results/stats.sub0050.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      051                                                                                                  \
+   "$data_dir/subj.sub0051/sub0051.CSPLINzero.results/stats.sub0051.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      052                                                                                                  \
+   "$data_dir/subj.sub0052/sub0052.CSPLINzero.results/stats.sub0052.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      053                                                                                                  \
+   "$data_dir/subj.sub0053/sub0053.CSPLINzero.results/stats.sub0053.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      055                                                                                                  \
+   "$data_dir/subj.sub0055/sub0055.CSPLINzero.results/stats.sub0055.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      056                                                                                                  \
+   "$data_dir/subj.sub0056/sub0056.CSPLINzero.results/stats.sub0056.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      057                                                                                                  \
+   "$data_dir/subj.sub0057/sub0057.CSPLINzero.results/stats.sub0057.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      058                                                                                                  \
+   "$data_dir/subj.sub0058/sub0058.CSPLINzero.results/stats.sub0058.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      059                                                                                                  \
+   "$data_dir/subj.sub0059/sub0059.CSPLINzero.results/stats.sub0059.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      060                                                                                                  \
+   "$data_dir/subj.sub0060/sub0060.CSPLINzero.results/stats.sub0060.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      061                                                                                                  \
+   "$data_dir/subj.sub0061/sub0061.CSPLINzero.results/stats.sub0061.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      063                                                                                                  \
+   "$data_dir/subj.sub0063/sub0063.CSPLINzero.results/stats.sub0063.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      064                                                                                                  \
+   "$data_dir/subj.sub0064/sub0064.CSPLINzero.results/stats.sub0064.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      065                                                                                                  \
+   "$data_dir/subj.sub0065/sub0065.CSPLINzero.results/stats.sub0065.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      066                                                                                                  \
+   "$data_dir/subj.sub0066/sub0066.CSPLINzero.results/stats.sub0066.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      068                                                                                                  \
+   "$data_dir/subj.sub0068/sub0068.CSPLINzero.results/stats.sub0068.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      069                                                                                                  \
+   "$data_dir/subj.sub0069/sub0069.CSPLINzero.results/stats.sub0069.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      070                                                                                                  \
+   "$data_dir/subj.sub0070/sub0070.CSPLINzero.results/stats.sub0070.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      071                                                                                                  \
+   "$data_dir/subj.sub0071/sub0071.CSPLINzero.results/stats.sub0071.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      072                                                                                                  \
+   "$data_dir/subj.sub0072/sub0072.CSPLINzero.results/stats.sub0072.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      073                                                                                                  \
+   "$data_dir/subj.sub0073/sub0073.CSPLINzero.results/stats.sub0073.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      074                                                                                                  \
+   "$data_dir/subj.sub0074/sub0074.CSPLINzero.results/stats.sub0074.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      075                                                                                                  \
+   "$data_dir/subj.sub0075/sub0075.CSPLINzero.results/stats.sub0075.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      076                                                                                                  \
+   "$data_dir/subj.sub0076/sub0076.CSPLINzero.results/stats.sub0076.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      078                                                                                                  \
+   "$data_dir/subj.sub0078/sub0078.CSPLINzero.results/stats.sub0078.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      079                                                                                                  \
+   "$data_dir/subj.sub0079/sub0079.CSPLINzero.results/stats.sub0079.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      080                                                                                                  \
+   "$data_dir/subj.sub0080/sub0080.CSPLINzero.results/stats.sub0080.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      081                                                                                                  \
+   "$data_dir/subj.sub0081/sub0081.CSPLINzero.results/stats.sub0081.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      082                                                                                                  \
+   "$data_dir/subj.sub0082/sub0082.CSPLINzero.results/stats.sub0082.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      084                                                                                                  \
+   "$data_dir/subj.sub0084/sub0084.CSPLINzero.results/stats.sub0084.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      085                                                                                                  \
+   "$data_dir/subj.sub0085/sub0085.CSPLINzero.results/stats.sub0085.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      086                                                                                                  \
+   "$data_dir/subj.sub0086/sub0086.CSPLINzero.results/stats.sub0086.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      087                                                                                                  \
+   "$data_dir/subj.sub0087/sub0087.CSPLINzero.results/stats.sub0087.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      088                                                                                                  \
+   "$data_dir/subj.sub0088/sub0088.CSPLINzero.results/stats.sub0088.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      089                                                                                                  \
+   "$data_dir/subj.sub0089/sub0089.CSPLINzero.results/stats.sub0089.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      091                                                                                                  \
+   "$data_dir/subj.sub0091/sub0091.CSPLINzero.results/stats.sub0091.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      092                                                                                                  \
+   "$data_dir/subj.sub0092/sub0092.CSPLINzero.results/stats.sub0092.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      093                                                                                                  \
+   "$data_dir/subj.sub0093/sub0093.CSPLINzero.results/stats.sub0093.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      094                                                                                                  \
+   "$data_dir/subj.sub0094/sub0094.CSPLINzero.results/stats.sub0094.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      095                                                                                                  \
+   "$data_dir/subj.sub0095/sub0095.CSPLINzero.results/stats.sub0095.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      096                                                                                                  \
+   "$data_dir/subj.sub0096/sub0096.CSPLINzero.results/stats.sub0096.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      097                                                                                                  \
+   "$data_dir/subj.sub0097/sub0097.CSPLINzero.results/stats.sub0097.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      098                                                                                                  \
+   "$data_dir/subj.sub0098/sub0098.CSPLINzero.results/stats.sub0098.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      099                                                                                                  \
+   "$data_dir/subj.sub0099/sub0099.CSPLINzero.results/stats.sub0099.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      100                                                                                                  \
+   "$data_dir/subj.sub0100/sub0100.CSPLINzero.results/stats.sub0100.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      101                                                                                                  \
+   "$data_dir/subj.sub0101/sub0101.CSPLINzero.results/stats.sub0101.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      102                                                                                                  \
+   "$data_dir/subj.sub0102/sub0102.CSPLINzero.results/stats.sub0102.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      103                                                                                                  \
+   "$data_dir/subj.sub0103/sub0103.CSPLINzero.results/stats.sub0103.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      105                                                                                                  \
+   "$data_dir/subj.sub0105/sub0105.CSPLINzero.results/stats.sub0105.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      106                                                                                                  \
+   "$data_dir/subj.sub0106/sub0106.CSPLINzero.results/stats.sub0106.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      107                                                                                                  \
+   "$data_dir/subj.sub0107/sub0107.CSPLINzero.results/stats.sub0107.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      110                                                                                                  \
+   "$data_dir/subj.sub0110/sub0110.CSPLINzero.results/stats.sub0110.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      111                                                                                                  \
+   "$data_dir/subj.sub0111/sub0111.CSPLINzero.results/stats.sub0111.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      112                                                                                                  \
+   "$data_dir/subj.sub0112/sub0112.CSPLINzero.results/stats.sub0112.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      113                                                                                                  \
+   "$data_dir/subj.sub0113/sub0113.CSPLINzero.results/stats.sub0113.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      114                                                                                                  \
+   "$data_dir/subj.sub0114/sub0114.CSPLINzero.results/stats.sub0114.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      115                                                                                                  \
+   "$data_dir/subj.sub0115/sub0115.CSPLINzero.results/stats.sub0115.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      116                                                                                                  \
+   "$data_dir/subj.sub0116/sub0116.CSPLINzero.results/stats.sub0116.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      117                                                                                                  \
+   "$data_dir/subj.sub0117/sub0117.CSPLINzero.results/stats.sub0117.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      118                                                                                                  \
+   "$data_dir/subj.sub0118/sub0118.CSPLINzero.results/stats.sub0118.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      120                                                                                                  \
+   "$data_dir/subj.sub0120/sub0120.CSPLINzero.results/stats.sub0120.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      121                                                                                                  \
+   "$data_dir/subj.sub0121/sub0121.CSPLINzero.results/stats.sub0121.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      122                                                                                                  \
+   "$data_dir/subj.sub0122/sub0122.CSPLINzero.results/stats.sub0122.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      123                                                                                                  \
+   "$data_dir/subj.sub0123/sub0123.CSPLINzero.results/stats.sub0123.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      124                                                                                                  \
+   "$data_dir/subj.sub0124/sub0124.CSPLINzero.results/stats.sub0124.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      125                                                                                                  \
+   "$data_dir/subj.sub0125/sub0125.CSPLINzero.results/stats.sub0125.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      126                                                                                                  \
+   "$data_dir/subj.sub0126/sub0126.CSPLINzero.results/stats.sub0126.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      127                                                                                                  \
+   "$data_dir/subj.sub0127/sub0127.CSPLINzero.results/stats.sub0127.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      128                                                                                                  \
+   "$data_dir/subj.sub0128/sub0128.CSPLINzero.results/stats.sub0128.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      129                                                                                                  \
+   "$data_dir/subj.sub0129/sub0129.CSPLINzero.results/stats.sub0129.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      130                                                                                                  \
+   "$data_dir/subj.sub0130/sub0130.CSPLINzero.results/stats.sub0130.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      131                                                                                                  \
+   "$data_dir/subj.sub0131/sub0131.CSPLINzero.results/stats.sub0131.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      132                                                                                                  \
+   "$data_dir/subj.sub0132/sub0132.CSPLINzero.results/stats.sub0132.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      133                                                                                                  \
+   "$data_dir/subj.sub0133/sub0133.CSPLINzero.results/stats.sub0133.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      135                                                                                                  \
+   "$data_dir/subj.sub0135/sub0135.CSPLINzero.results/stats.sub0135.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      136                                                                                                  \
+   "$data_dir/subj.sub0136/sub0136.CSPLINzero.results/stats.sub0136.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      137                                                                                                  \
+   "$data_dir/subj.sub0137/sub0137.CSPLINzero.results/stats.sub0137.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      138                                                                                                  \
+   "$data_dir/subj.sub0138/sub0138.CSPLINzero.results/stats.sub0138.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      139                                                                                                  \
+   "$data_dir/subj.sub0139/sub0139.CSPLINzero.results/stats.sub0139.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      140                                                                                                  \
+   "$data_dir/subj.sub0140/sub0140.CSPLINzero.results/stats.sub0140.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      141                                                                                                  \
+   "$data_dir/subj.sub0141/sub0141.CSPLINzero.results/stats.sub0141.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      142                                                                                                  \
+   "$data_dir/subj.sub0142/sub0142.CSPLINzero.results/stats.sub0142.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      143                                                                                                  \
+   "$data_dir/subj.sub0143/sub0143.CSPLINzero.results/stats.sub0143.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      144                                                                                                  \
+   "$data_dir/subj.sub0144/sub0144.CSPLINzero.results/stats.sub0144.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      145                                                                                                  \
+   "$data_dir/subj.sub0145/sub0145.CSPLINzero.results/stats.sub0145.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      146                                                                                                  \
+   "$data_dir/subj.sub0146/sub0146.CSPLINzero.results/stats.sub0146.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      147                                                                                                  \
+   "$data_dir/subj.sub0147/sub0147.CSPLINzero.results/stats.sub0147.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      148                                                                                                  \
+   "$data_dir/subj.sub0148/sub0148.CSPLINzero.results/stats.sub0148.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      149                                                                                                  \
+   "$data_dir/subj.sub0149/sub0149.CSPLINzero.results/stats.sub0149.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      150                                                                                                  \
+   "$data_dir/subj.sub0150/sub0150.CSPLINzero.results/stats.sub0150.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      151                                                                                                  \
+   "$data_dir/subj.sub0151/sub0151.CSPLINzero.results/stats.sub0151.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      152                                                                                                  \
+   "$data_dir/subj.sub0152/sub0152.CSPLINzero.results/stats.sub0152.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      154                                                                                                  \
+   "$data_dir/subj.sub0154/sub0154.CSPLINzero.results/stats.sub0154.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      155                                                                                                  \
+   "$data_dir/subj.sub0155/sub0155.CSPLINzero.results/stats.sub0155.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      156                                                                                                  \
+   "$data_dir/subj.sub0156/sub0156.CSPLINzero.results/stats.sub0156.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      157                                                                                                  \
+   "$data_dir/subj.sub0157/sub0157.CSPLINzero.results/stats.sub0157.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      158                                                                                                  \
+   "$data_dir/subj.sub0158/sub0158.CSPLINzero.results/stats.sub0158.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      159                                                                                                  \
+   "$data_dir/subj.sub0159/sub0159.CSPLINzero.results/stats.sub0159.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      160                                                                                                  \
+   "$data_dir/subj.sub0160/sub0160.CSPLINzero.results/stats.sub0160.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      161                                                                                                  \
+   "$data_dir/subj.sub0161/sub0161.CSPLINzero.results/stats.sub0161.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      162                                                                                                  \
+   "$data_dir/subj.sub0162/sub0162.CSPLINzero.results/stats.sub0162.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      163                                                                                                  \
+   "$data_dir/subj.sub0163/sub0163.CSPLINzero.results/stats.sub0163.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      164                                                                                                  \
+   "$data_dir/subj.sub0164/sub0164.CSPLINzero.results/stats.sub0164.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      165                                                                                                  \
+   "$data_dir/subj.sub0165/sub0165.CSPLINzero.results/stats.sub0165.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      166                                                                                                  \
+   "$data_dir/subj.sub0166/sub0166.CSPLINzero.results/stats.sub0166.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      168                                                                                                  \
+   "$data_dir/subj.sub0168/sub0168.CSPLINzero.results/stats.sub0168.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      169                                                                                                  \
+   "$data_dir/subj.sub0169/sub0169.CSPLINzero.results/stats.sub0169.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      170                                                                                                  \
+   "$data_dir/subj.sub0170/sub0170.CSPLINzero.results/stats.sub0170.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      171                                                                                                  \
+   "$data_dir/subj.sub0171/sub0171.CSPLINzero.results/stats.sub0171.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      172                                                                                                  \
+   "$data_dir/subj.sub0172/sub0172.CSPLINzero.results/stats.sub0172.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      173                                                                                                  \
+   "$data_dir/subj.sub0173/sub0173.CSPLINzero.results/stats.sub0173.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      174                                                                                                  \
+   "$data_dir/subj.sub0174/sub0174.CSPLINzero.results/stats.sub0174.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      175                                                                                                  \
+   "$data_dir/subj.sub0175/sub0175.CSPLINzero.results/stats.sub0175.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      176                                                                                                  \
+   "$data_dir/subj.sub0176/sub0176.CSPLINzero.results/stats.sub0176.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      177                                                                                                  \
+   "$data_dir/subj.sub0177/sub0177.CSPLINzero.results/stats.sub0177.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      178                                                                                                  \
+   "$data_dir/subj.sub0178/sub0178.CSPLINzero.results/stats.sub0178.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      179                                                                                                  \
+   "$data_dir/subj.sub0179/sub0179.CSPLINzero.results/stats.sub0179.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      180                                                                                                  \
+   "$data_dir/subj.sub0180/sub0180.CSPLINzero.results/stats.sub0180.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      181                                                                                                  \
+   "$data_dir/subj.sub0181/sub0181.CSPLINzero.results/stats.sub0181.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      182                                                                                                  \
+   "$data_dir/subj.sub0182/sub0182.CSPLINzero.results/stats.sub0182.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      183                                                                                                  \
+   "$data_dir/subj.sub0183/sub0183.CSPLINzero.results/stats.sub0183.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      184                                                                                                  \
+   "$data_dir/subj.sub0184/sub0184.CSPLINzero.results/stats.sub0184.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      186                                                                                                  \
+   "$data_dir/subj.sub0186/sub0186.CSPLINzero.results/stats.sub0186.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      187                                                                                                  \
+   "$data_dir/subj.sub0187/sub0187.CSPLINzero.results/stats.sub0187.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      189                                                                                                  \
+   "$data_dir/subj.sub0189/sub0189.CSPLINzero.results/stats.sub0189.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      192                                                                                                  \
+   "$data_dir/subj.sub0192/sub0192.CSPLINzero.results/stats.sub0192.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      193                                                                                                  \
+   "$data_dir/subj.sub0193/sub0193.CSPLINzero.results/stats.sub0193.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      194                                                                                                  \
+   "$data_dir/subj.sub0194/sub0194.CSPLINzero.results/stats.sub0194.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      195                                                                                                  \
+   "$data_dir/subj.sub0195/sub0195.CSPLINzero.results/stats.sub0195.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      196                                                                                                  \
+   "$data_dir/subj.sub0196/sub0196.CSPLINzero.results/stats.sub0196.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      197                                                                                                  \
+   "$data_dir/subj.sub0197/sub0197.CSPLINzero.results/stats.sub0197.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      198                                                                                                  \
+   "$data_dir/subj.sub0198/sub0198.CSPLINzero.results/stats.sub0198.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      199                                                                                                  \
+   "$data_dir/subj.sub0199/sub0199.CSPLINzero.results/stats.sub0199.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      200                                                                                                  \
+   "$data_dir/subj.sub0200/sub0200.CSPLINzero.results/stats.sub0200.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      201                                                                                                  \
+   "$data_dir/subj.sub0201/sub0201.CSPLINzero.results/stats.sub0201.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      202                                                                                                  \
+   "$data_dir/subj.sub0202/sub0202.CSPLINzero.results/stats.sub0202.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      204                                                                                                  \
+   "$data_dir/subj.sub0204/sub0204.CSPLINzero.results/stats.sub0204.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      205                                                                                                  \
+   "$data_dir/subj.sub0205/sub0205.CSPLINzero.results/stats.sub0205.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      206                                                                                                  \
+   "$data_dir/subj.sub0206/sub0206.CSPLINzero.results/stats.sub0206.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      207                                                                                                  \
+   "$data_dir/subj.sub0207/sub0207.CSPLINzero.results/stats.sub0207.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      208                                                                                                  \
+   "$data_dir/subj.sub0208/sub0208.CSPLINzero.results/stats.sub0208.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      210                                                                                                  \
+   "$data_dir/subj.sub0210/sub0210.CSPLINzero.results/stats.sub0210.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      211                                                                                                  \
+   "$data_dir/subj.sub0211/sub0211.CSPLINzero.results/stats.sub0211.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      212                                                                                                  \
+   "$data_dir/subj.sub0212/sub0212.CSPLINzero.results/stats.sub0212.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      213                                                                                                  \
+   "$data_dir/subj.sub0213/sub0213.CSPLINzero.results/stats.sub0213.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      214                                                                                                  \
+   "$data_dir/subj.sub0214/sub0214.CSPLINzero.results/stats.sub0214.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      215                                                                                                  \
+   "$data_dir/subj.sub0215/sub0215.CSPLINzero.results/stats.sub0215.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      216                                                                                                  \
+   "$data_dir/subj.sub0216/sub0216.CSPLINzero.results/stats.sub0216.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      217                                                                                                  \
+   "$data_dir/subj.sub0217/sub0217.CSPLINzero.results/stats.sub0217.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      218                                                                                                  \
+   "$data_dir/subj.sub0218/sub0218.CSPLINzero.results/stats.sub0218.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      219                                                                                                  \
+   "$data_dir/subj.sub0219/sub0219.CSPLINzero.results/stats.sub0219.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      220                                                                                                  \
+   "$data_dir/subj.sub0220/sub0220.CSPLINzero.results/stats.sub0220.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      221                                                                                                  \
+   "$data_dir/subj.sub0221/sub0221.CSPLINzero.results/stats.sub0221.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      222                                                                                                  \
+   "$data_dir/subj.sub0222/sub0222.CSPLINzero.results/stats.sub0222.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      223                                                                                                  \
+   "$data_dir/subj.sub0223/sub0223.CSPLINzero.results/stats.sub0223.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      224                                                                                                  \
+   "$data_dir/subj.sub0224/sub0224.CSPLINzero.results/stats.sub0224.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      225                                                                                                  \
+   "$data_dir/subj.sub0225/sub0225.CSPLINzero.results/stats.sub0225.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      226                                                                                                  \
+   "$data_dir/subj.sub0226/sub0226.CSPLINzero.results/stats.sub0226.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      227                                                                                                  \
+   "$data_dir/subj.sub0227/sub0227.CSPLINzero.results/stats.sub0227.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      228                                                                                                  \
+   "$data_dir/subj.sub0228/sub0228.CSPLINzero.results/stats.sub0228.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      230                                                                                                  \
+   "$data_dir/subj.sub0230/sub0230.CSPLINzero.results/stats.sub0230.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      231                                                                                                  \
+   "$data_dir/subj.sub0231/sub0231.CSPLINzero.results/stats.sub0231.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      232                                                                                                  \
+   "$data_dir/subj.sub0232/sub0232.CSPLINzero.results/stats.sub0232.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      233                                                                                                  \
+   "$data_dir/subj.sub0233/sub0233.CSPLINzero.results/stats.sub0233.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      234                                                                                                  \
+   "$data_dir/subj.sub0234/sub0234.CSPLINzero.results/stats.sub0234.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      235                                                                                                  \
+   "$data_dir/subj.sub0235/sub0235.CSPLINzero.results/stats.sub0235.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      236                                                                                                  \
+   "$data_dir/subj.sub0236/sub0236.CSPLINzero.results/stats.sub0236.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      238                                                                                                  \
+   "$data_dir/subj.sub0238/sub0238.CSPLINzero.results/stats.sub0238.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      239                                                                                                  \
+   "$data_dir/subj.sub0239/sub0239.CSPLINzero.results/stats.sub0239.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      240                                                                                                  \
+   "$data_dir/subj.sub0240/sub0240.CSPLINzero.results/stats.sub0240.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      241                                                                                                  \
+   "$data_dir/subj.sub0241/sub0241.CSPLINzero.results/stats.sub0241.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      243                                                                                                  \
+   "$data_dir/subj.sub0243/sub0243.CSPLINzero.results/stats.sub0243.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      244                                                                                                  \
+   "$data_dir/subj.sub0244/sub0244.CSPLINzero.results/stats.sub0244.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      245                                                                                                  \
+   "$data_dir/subj.sub0245/sub0245.CSPLINzero.results/stats.sub0245.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      246                                                                                                  \
+   "$data_dir/subj.sub0246/sub0246.CSPLINzero.results/stats.sub0246.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      249                                                                                                  \
+   "$data_dir/subj.sub0249/sub0249.CSPLINzero.results/stats.sub0249.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      250                                                                                                  \
+   "$data_dir/subj.sub0250/sub0250.CSPLINzero.results/stats.sub0250.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      251                                                                                                  \
+   "$data_dir/subj.sub0251/sub0251.CSPLINzero.results/stats.sub0251.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      252                                                                                                  \
+   "$data_dir/subj.sub0252/sub0252.CSPLINzero.results/stats.sub0252.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      253                                                                                                  \
+   "$data_dir/subj.sub0253/sub0253.CSPLINzero.results/stats.sub0253.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      254                                                                                                  \
+   "$data_dir/subj.sub0254/sub0254.CSPLINzero.results/stats.sub0254.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      255                                                                                                  \
+   "$data_dir/subj.sub0255/sub0255.CSPLINzero.results/stats.sub0255.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      257                                                                                                  \
+   "$data_dir/subj.sub0257/sub0257.CSPLINzero.results/stats.sub0257.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      259                                                                                                  \
+   "$data_dir/subj.sub0259/sub0259.CSPLINzero.results/stats.sub0259.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      260                                                                                                  \
+   "$data_dir/subj.sub0260/sub0260.CSPLINzero.results/stats.sub0260.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      261                                                                                                  \
+   "$data_dir/subj.sub0261/sub0261.CSPLINzero.results/stats.sub0261.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      262                                                                                                  \
+   "$data_dir/subj.sub0262/sub0262.CSPLINzero.results/stats.sub0262.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      263                                                                                                  \
+   "$data_dir/subj.sub0263/sub0263.CSPLINzero.results/stats.sub0263.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      264                                                                                                  \
+   "$data_dir/subj.sub0264/sub0264.CSPLINzero.results/stats.sub0264.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      265                                                                                                  \
+   "$data_dir/subj.sub0265/sub0265.CSPLINzero.results/stats.sub0265.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      268                                                                                                  \
+   "$data_dir/subj.sub0268/sub0268.CSPLINzero.results/stats.sub0268.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      270                                                                                                  \
+   "$data_dir/subj.sub0270/sub0270.CSPLINzero.results/stats.sub0270.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      271                                                                                                  \
+   "$data_dir/subj.sub0271/sub0271.CSPLINzero.results/stats.sub0271.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      272                                                                                                  \
+   "$data_dir/subj.sub0272/sub0272.CSPLINzero.results/stats.sub0272.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      277                                                                                                  \
+   "$data_dir/subj.sub0277/sub0277.CSPLINzero.results/stats.sub0277.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      278                                                                                                  \
+   "$data_dir/subj.sub0278/sub0278.CSPLINzero.results/stats.sub0278.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      280                                                                                                  \
+   "$data_dir/subj.sub0280/sub0280.CSPLINzero.results/stats.sub0280.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      281                                                                                                  \
+   "$data_dir/subj.sub0281/sub0281.CSPLINzero.results/stats.sub0281.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      282                                                                                                  \
+   "$data_dir/subj.sub0282/sub0282.CSPLINzero.results/stats.sub0282.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      285                                                                                                  \
+   "$data_dir/subj.sub0285/sub0285.CSPLINzero.results/stats.sub0285.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      291                                                                                                  \
+   "$data_dir/subj.sub0291/sub0291.CSPLINzero.results/stats.sub0291.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      295                                                                                                  \
+   "$data_dir/subj.sub0295/sub0295.CSPLINzero.results/stats.sub0295.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      302                                                                                                  \
+   "$data_dir/subj.sub0302/sub0302.CSPLINzero.results/stats.sub0302.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      311                                                                                                  \
+   "$data_dir/subj.sub0311/sub0311.CSPLINzero.results/stats.sub0311.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      313                                                                                                  \
+   "$data_dir/subj.sub0313/sub0313.CSPLINzero.results/stats.sub0313.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      314                                                                                                  \
+   "$data_dir/subj.sub0314/sub0314.CSPLINzero.results/stats.sub0314.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      317                                                                                                  \
+   "$data_dir/subj.sub0317/sub0317.CSPLINzero.results/stats.sub0317.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      321                                                                                                  \
+   "$data_dir/subj.sub0321/sub0321.CSPLINzero.results/stats.sub0321.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+      333                                                                                                  \
+   "$data_dir/subj.sub0333/sub0333.CSPLINzero.results/stats.sub0333.CSPLINzero_REML+tlrc.HEAD[R-L#0_Coef]" \
+                                                                                                           \
+   -mask ../out/afni/subject_results/group_results/mask_intersection_func_up2date+tlrc
+

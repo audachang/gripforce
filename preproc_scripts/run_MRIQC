@@ -1,0 +1,5 @@
+docker run -it --rm \
+	-v /media/tcnl/data2/fmriprep/BIDS:/data:ro \
+	-v /media/tcnl/data2/GRIPFORCE/out/mriqc:/out \
+	nipreps/mriqc:22.0.1 \
+	/data /out $1 -m T1w bold 

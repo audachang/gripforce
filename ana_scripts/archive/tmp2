@@ -1,0 +1,9 @@
+#!/usr/bin/tcsh -ef
+
+echo $0 $1 $2 $3 $4
+
+if ($4 == 1 ) then
+
+	echo the fourth arg is $4
+
+endif

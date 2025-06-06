@@ -1,0 +1,19 @@
+#  fmriprep ../BIDS/ ../out/ \
+#    participant \
+#    --participant-label $1 \
+#    --skip-bids-validation \
+#    --md-only-boilerplate \
+#    --fs-no-reconall \
+#    --output-spaces MNI152NLin2009cAsym \
+#    --nthreads 20 \
+#    --stop-on-first-crash \
+#    --mem_mb 64 \
+#    -w ../work/
+
+
+/home/aclexp/anaconda3/envs/neuro/bin/fmriprep --fs-no-reconall \
+	--participant-label $1\
+	--nthreads 20	\
+	--omp-nthreads 20 \
+	--mem_mb 64000 \
+	BIDS/ out/ participant -w work/

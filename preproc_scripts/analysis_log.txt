@@ -1,0 +1,5 @@
+20211029 Erik Chang
+
+sub-0049 has problematic T1 BRIK with different dimensions, cannot be averaged with other subject's T1
+
+sub-0059 cannot run REML 3dDeconvolve due to matrix singularity
